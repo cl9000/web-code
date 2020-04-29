@@ -1,0 +1,260 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+</head>
+<!-- 参考地址 https://www.cnblogs.com/xiaohuochai/p/6368039.html -->
+<body>
+    <script>
+        var digit =
+            [
+                [
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 1, 1, 0, 1, 1, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 0, 1, 1, 0],
+                    [0, 0, 1, 1, 1, 0, 0]
+                ],//0
+                [
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 1, 1, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [1, 1, 1, 1, 1, 1, 1]
+                ],//1
+                [
+                    [0, 1, 1, 1, 1, 1, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 0, 0, 0],
+                    [0, 1, 1, 0, 0, 0, 0],
+                    [1, 1, 0, 0, 0, 0, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 1, 1, 1, 1, 1]
+                ],//2
+                [
+                    [1, 1, 1, 1, 1, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 1, 1, 1, 0]
+                ],//3
+                [
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 1, 1, 1, 0],
+                    [0, 0, 1, 1, 1, 1, 0],
+                    [0, 1, 1, 0, 1, 1, 0],
+                    [1, 1, 0, 0, 1, 1, 0],
+                    [1, 1, 1, 1, 1, 1, 1],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 1, 1, 1, 1]
+                ],//4
+                [
+                    [1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 0, 0, 0, 0, 0],
+                    [1, 1, 0, 0, 0, 0, 0],
+                    [1, 1, 1, 1, 1, 1, 0],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 1, 1, 1, 0]
+                ],//5
+                [
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 1, 1, 0, 0, 0],
+                    [0, 1, 1, 0, 0, 0, 0],
+                    [1, 1, 0, 0, 0, 0, 0],
+                    [1, 1, 0, 1, 1, 1, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 1, 1, 1, 0]
+                ],//6
+                [
+                    [1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 0, 0, 0],
+                    [0, 0, 1, 1, 0, 0, 0],
+                    [0, 0, 1, 1, 0, 0, 0],
+                    [0, 0, 1, 1, 0, 0, 0]
+                ],//7
+                [
+                    [0, 1, 1, 1, 1, 1, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 1, 1, 1, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 1, 1, 1, 0]
+                ],//8
+                [
+                    [0, 1, 1, 1, 1, 1, 0],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [1, 1, 0, 0, 0, 1, 1],
+                    [0, 1, 1, 1, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 0, 1, 1],
+                    [0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 0, 1, 1, 0, 0],
+                    [0, 1, 1, 0, 0, 0, 0]
+                ],//9
+                [
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 1, 1, 1, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0]
+                ]//:
+            ];
+    </script>
+
+    <!-- 点阵数字 -->
+    <div id="test">
+        <button>0</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+    </div>
+    <canvas id="canvas" style="width:400px;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+
+    <!-- 进度条 -->
+    <div id="myDiv" style="background-color: lightblue;width: 0;height: 20px;line-height: 20px;">0%</div>
+    <button id="btn">run</button>
+    <script>
+        var timer;
+        btn.onclick = function () {
+            myDiv.style.width = '0';
+            cancelAnimationFrame(timer);
+            timer = requestAnimationFrame(function fn() {
+                if (parseInt(myDiv.style.width) < 500) {
+                    myDiv.style.width = parseInt(myDiv.style.width) + 5 + 'px';
+                    myDiv.innerHTML = parseInt(myDiv.style.width) / 5 + '%';
+                    timer = requestAnimationFrame(fn);
+                } else {
+                    cancelAnimationFrame(timer);
+                }
+            });
+        }
+    </script>
+    
+    <script>
+        // var canvas = document.getElementById('canvas');
+        // if(canvas.getContext){
+        //     var ctx = canvas.getContext('2d');
+        //     function renderDigit(num){
+        //         //重置画布宽度，达到清空画布的效果
+        //         canvas.height = 100;
+        //         var R = canvas.height/20-1;
+        //         for(var i = 0; i < digit[num].length; i++){
+        //             for(var j = 0; j < digit[num][i].length; j++){
+        //                 if(digit[num][i][j] == 1) {
+        //                     ctx.beginPath();
+        //                     ctx.arc(j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);   
+        //                     ctx.closePath();
+        //                     ctx.fillStyle="#006cff";
+        //                     // ctx.fill();
+        //                     ctx.stroke();
+        //                 }
+        //             }
+        //         }        
+        //     }
+        //     var test = document.getElementById('test');
+        //     test.onclick = function(e){
+        //         e = e || event;
+        //         var target = e.target || e.srcElement;
+        //         if(!isNaN(target.innerHTML)){
+        //             renderDigit(target.innerHTML);
+        //         } 
+        //     }    
+        // }
+
+        // 时钟实现
+
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var cxt = canvas.getContext('2d');
+            canvas.height = 100;
+            canvas.width = 700;
+            function renderDigit(index, num) {
+                var R = canvas.height / 20 - 1;
+                for (var i = 0; i < digit[num].length; i++) {
+                    for (var j = 0; j < digit[num][i].length; j++) {
+                        if (digit[num][i][j] == 1) {
+                            cxt.beginPath();
+                            cxt.arc(14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1), i * 2 * (R + 1) + (R + 1), R, 0, 2 * Math.PI);
+                            cxt.closePath();
+                            cxt.fill();
+                        }
+                    }
+                }
+            }
+            function digitTime() {
+                /*获取时间数据*/
+                var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+                //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+                var data = [];
+                data.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+                /*渲染时钟*/
+                //重置画布宽度，达到清空画布的效果
+                canvas.height = 100;
+                for (var i = 0; i < data.length; i++) {
+                    renderDigit(i, data[i]);
+                }
+            }
+            digitTime();
+            clearInterval(oTimer);
+            var oTimer = setInterval(function () {
+                digitTime();
+            }, 500);
+        }
+    </script>
+    </script>
+
+</body>
+
+</html>

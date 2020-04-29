@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Hello, world!</title>
+</head>
+
+<style>
+  .section {
+    background: #0076FF;
+  }
+
+  .accountCheck-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 20%;
+    left: 50%;
+    background: url(./static/img/bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-animation: rotateClockwise 20s linear infinite;
+    animation: rotateClockwise 20s linear infinite;
+  }
+
+  .accountCheck-bg--inner {
+    width: 50%;
+    height: 50%;
+    background: url(./static/img/account-check-halo.png) no-repeat;
+    margin: 25% auto;
+    background-position: center;
+    background-size: cover;
+    -webkit-animation: rotateAnitclockwise 5s linear infinite;
+    animation: rotateAnitclockwise 5s linear infinite;
+  }
+
+  @-webkit-keyframes rotateClockwise {
+    from {
+      -webkit-transform: translate(-50%, 0) rotate(0deg);
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: translate(-50%, 0) rotate(360deg);
+      transform: translate(-50%, 0) rotate(360deg);
+    }
+  }
+
+  @keyframes rotateClockwise {
+    from {
+      -webkit-transform: translate(-50%, 0) rotate(0deg);
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: translate(-50%, 0) rotate(360deg);
+      transform: translate(-50%, 0) rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rotateAnitclockwise {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes rotateAnitclockwise {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
+</style>
+
+<body style="margin: 0;padding: 0;">
+  <div class="section" style="height: 1080px">
+    <div class="accountCheck-bg">
+      <div class="accountCheck-bg--inner"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
