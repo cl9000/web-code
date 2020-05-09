@@ -1,0 +1,279 @@
+@charset "UTF-8"; html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2ab8ac;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.new-banner {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  z-index: 10;
+  width: 250px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1em;
+}
+
+.new-banner:before {
+  content: 'new!';
+  position: absolute;
+  left: -13px;
+  top: -7px;
+  background-color: #e96144;
+  padding: .2em .5em;
+  color: white;
+  border-radius: 4px;
+  transform: rotate(-15deg);
+}
+
+.new-banner a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.new-banner a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.new-banner strong {
+  font-size: 2em;
+}
+
+.section {
+  color: white;
+  padding: 85px 50px;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.section h4 {
+  font-size: 1.4em;
+  font-family: 'Gentium Basic', serif;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.section > p {
+  margin-top: 25px;
+  line-height: 1.5em;
+}
+
+.section a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section a:link {
+  text-decoration: none;
+}
+
+.section a:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.section footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  line-height: 1.3em;
+}
+
+a[href^="#"] {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+a[href^="#"] h1[id] {
+  padding-right: .1em;
+  padding-left: .1em;
+}
+
+a[href^="#"], a[href^="#"]:hover {
+  color: inherit;
+}
+
+a[href^="#"]:hover:before {
+  opacity: 1;
+}
+
+a[href^="#"]:before {
+  content: '#';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  font-size: 2em;
+  font-family: 'Dancing Script', cursive;
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.home {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.home h1, .home h4 {
+  color: white;
+  margin-top: .5em;
+}
+
+.home h1:after {
+  content: attr(title);
+  position: absolute;
+  font-size: .25em;
+  margin-left: -1em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.glass {
+  position: relative;
+  display: inline-block;
+  border-top: 169px solid white;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  height: 0;
+  margin-top: 10em;
+  width: 70px;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 2.5em;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(255, 255, 255, 0.3);
+}
+
+.arrow:before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+.section.shamrock .arrow:before {
+  border-top: 14px solid #2ab8ac;
+}
+
+.section.carrot .arrow:before {
+  border-top: 14px solid #ffab52;
+}
+
+.section.amethyst .arrow:before {
+  border-top: 14px solid #9c55a5;
+}
+
+.section.scooter .arrow:before {
+  border-top: 14px solid #57cadd;
+}
+
+.section.dolly .arrow:before {
+  border-top: 14px solid #fff68d;
+}
+
+.section.shamrock .arrow:before {
+  border-top: 14px solid #2ab8ac;
+}
+
+.section.pear .arrow:before {
+  border-top: 14px solid #cce033;
+}
+
+.section.carrot {
+  background-color: #ffab52;
+}
+
+.section.amethyst {
+  background-color: #9c55a5;
+}
+
+.section.scooter {
+  background-color: #57cadd;
+}
+
+.section.dolly {
+  background-color: #fff68d;
+  color: #2C3E50;
+}
+
+.section.shamrock {
+  background-color: #2ab8ac;
+}
+
+.section.pear {
+  background-color: #cce033;
+}
+
+.color-carrot {
+  color: #ffab52;
+}
+
+.color-amethyst {
+  color: #9c55a5;
+}
+
+.color-scooter {
+  color: #57cadd;
+}
+
+.color-dolly {
+  color: #fff68d;
+}
+
+.color-shamrock {
+  color: #2ab8ac;
+}
+
+.color-pear {
+  color: #cce033;
+}
+
+@media (min-width: 40em) {
+  .section h1 {
+      font-size: 5em;
+  }
+
+  .dib {
+    display: inline-block;
+}
+}
+
