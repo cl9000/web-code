@@ -10,20 +10,20 @@
 </head>
 <body>
 
-  <form action="index.html" class="login-form">
+  <form action="index.html" id="loginForm" name="loginForm" class="login-form">
     <h1>Login</h1>
 
     <div class="txtb">
-      <input type="text">
+      <input type="text" name="userName">
       <span data-placeholder="Username"></span>
     </div>
 
     <div class="txtb">
-      <input type="password">
+      <input type="password" name="password">
       <span data-placeholder="Password"></span>
     </div>
 
-    <input type="submit" class="logbtn" value="Login">
+    <input type="submit" class="logbtn" value="Login" onclick="getValue()">
 
     <div class="bottom-text">
       Don't have account? <a href="#">Sign up</a>
@@ -41,6 +41,12 @@
         $(this).removeClass("focus");
       }
     });
+
+    function getValue() {
+        var v1 = document.loginForm.userName.value;
+        var v2 = document.loginForm.password.value;
+        alert('userName = ' + v1 + '\npassword = ' + v2);
+      }
 
   </script>
 
