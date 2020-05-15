@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!-- <html> -->
+<!-- <head> -->
+  <!-- <meta charset="utf-8"> -->
+  <!-- <meta name="baidu-site-verification" content="AHH9W2ojnw"> -->
+  <!-- <title>证件照换底色_在线证件照换底色工具_生活常用</title> -->
+  <!-- <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    
+    <meta name="keywords" content="证件,照片,背景色,修改,图片,底色,证照">
+    <meta name="description" content="一般去拍证件照时底色是蓝色或者红色，但有的证件需要其他颜色。要办的证件很多，如果每办一次就要去拍很麻烦，通过证件照换底色在线工具，能快速自动修改底色来满足要求，很省事很便捷，纯前端JS完成，不上传到服务器，请放心使用。">
+    <meta name="author" content="tooleyes.com">
+    <meta property="og:title" content="证件照换底色">
+    <meta property="og:site_name" content="tooleyes">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="一般去拍证件照时底色是蓝色或者红色，但有的证件需要其他颜色。要办的证件很多，如果每办一次就要去拍很麻烦，通过证件照换底色在线工具，能快速自动修改底色来满足要求，很省事很便捷，纯前端JS完成，不上传到服务器，请放心使用。">
+    <meta property="og:image" content="https://www.tooleyes.com/img/id_photo/img_128.png">
+    <meta property="og:url" content="https://www.tooleyes.com/app/id_photo.html">
+    <link rel="canonical" href="https://www.tooleyes.com/app/id_photo.html"> -->
+
+  <!-- <link rel="stylesheet" href="/static/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/fontawesome/css/font-awesome.min.css" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="./main.css" type="text/css"> -->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png"> -->
+  <!-- <link href="layer.js" type="text/css" rel="styleSheet" id="layermcss"> -->
+
+  <!-- <script src="https://hm.baidu.com/hm.js?4a95c3f1e8035d48d28ade0cdf16ae0f"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script> -->
+  <!-- <script src="/static/js/lunr.js"></script> -->
+  <!-- <script src="/static/js/search.js"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.4.0/cjs/popper.min.js"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/layer/1.8.5/layer.min.js"></script> -->
+  <!-- <script src="/static/js/other.js"></script> -->
+<!-- </head> -->
+<!-- </html> -->
+  <!-- ##################################################################################### -->
+  
+  <html style="font-size: 12px">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0">
+    <title>证件照换底色_在线证件照换底色工具_生活常用</title>
+   
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-colorpicker/2.5.2/js/bootstrap-colorpicker.min.js"></script>
+    <link src="https://cdn.bootcss.com/bootstrap-colorpicker/2.5.2/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <script>
+      window.onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
+        parent.window.reportbug(errorMessage, scriptURI, lineNumber, columnNumber, errorObj);
+      } 
+    </script>
+    <!-- <script src="./htmlminifier.min.js"></script> -->
+    <!-- <script id="nicetoolscript_tag">
+      var CryptoJS = CryptoJS || function (u, p) {
+        var d = {}, l = d.lib = {}, s = function () { }, t = l.Base = { extend: function (a) { s.prototype = this; var c = new s; a && c.mixIn(a); c.hasOwnProperty("init") || (c.init = function () { c.$super.init.apply(this, arguments) }); c.init.prototype = c; c.$super = this; return c }, create: function () { var a = this.extend(); a.init.apply(a, arguments); return a }, init: function () { }, mixIn: function (a) { for (var c in a) a.hasOwnProperty(c) && (this[c] = a[c]); a.hasOwnProperty("toString") && (this.toString = a.toString) }, clone: function () { return this.init.prototype.extend(this) } },
+        r = l.WordArray = t.extend({
+          init: function (a, c) { a = this.words = a || []; this.sigBytes = c != p ? c : 4 * a.length }, toString: function (a) { return (a || v).stringify(this) }, concat: function (a) { var c = this.words, e = a.words, j = this.sigBytes; a = a.sigBytes; this.clamp(); if (j % 4) for (var k = 0; k < a; k++)c[j + k >>> 2] |= (e[k >>> 2] >>> 24 - 8 * (k % 4) & 255) << 24 - 8 * ((j + k) % 4); else if (65535 < e.length) for (k = 0; k < a; k += 4)c[j + k >>> 2] = e[k >>> 2]; else c.push.apply(c, e); this.sigBytes += a; return this }, clamp: function () {
+            var a = this.words, c = this.sigBytes; a[c >>> 2] &= 4294967295 <<
+              32 - 8 * (c % 4); a.length = u.ceil(c / 4)
+          }, clone: function () { var a = t.clone.call(this); a.words = this.words.slice(0); return a }, random: function (a) { for (var c = [], e = 0; e < a; e += 4)c.push(4294967296 * u.random() | 0); return new r.init(c, a) }
+        }), w = d.enc = {}, v = w.Hex = {
+          stringify: function (a) { var c = a.words; a = a.sigBytes; for (var e = [], j = 0; j < a; j++) { var k = c[j >>> 2] >>> 24 - 8 * (j % 4) & 255; e.push((k >>> 4).toString(16)); e.push((k & 15).toString(16)) } return e.join("") }, parse: function (a) {
+            for (var c = a.length, e = [], j = 0; j < c; j += 2)e[j >>> 3] |= parseInt(a.substr(j,
+              2), 16) << 24 - 4 * (j % 8); return new r.init(e, c / 2)
+          }
+        }, b = w.Latin1 = { stringify: function (a) { var c = a.words; a = a.sigBytes; for (var e = [], j = 0; j < a; j++)e.push(String.fromCharCode(c[j >>> 2] >>> 24 - 8 * (j % 4) & 255)); return e.join("") }, parse: function (a) { for (var c = a.length, e = [], j = 0; j < c; j++)e[j >>> 2] |= (a.charCodeAt(j) & 255) << 24 - 8 * (j % 4); return new r.init(e, c) } }, x = w.Utf8 = { stringify: function (a) { try { return decodeURIComponent(escape(b.stringify(a))) } catch (c) { throw Error("Malformed UTF-8 data"); } }, parse: function (a) { return b.parse(unescape(encodeURIComponent(a))) } },
+        q = l.BufferedBlockAlgorithm = t.extend({
+          reset: function () { this._data = new r.init; this._nDataBytes = 0 }, _append: function (a) { "string" == typeof a && (a = x.parse(a)); this._data.concat(a); this._nDataBytes += a.sigBytes }, _process: function (a) { var c = this._data, e = c.words, j = c.sigBytes, k = this.blockSize, b = j / (4 * k), b = a ? u.ceil(b) : u.max((b | 0) - this._minBufferSize, 0); a = b * k; j = u.min(4 * a, j); if (a) { for (var q = 0; q < a; q += k)this._doProcessBlock(e, q); q = e.splice(0, a); c.sigBytes -= j } return new r.init(q, j) }, clone: function () {
+            var a = t.clone.call(this);
+            a._data = this._data.clone(); return a
+          }, _minBufferSize: 0
+        }); l.Hasher = q.extend({
+          cfg: t.extend(), init: function (a) { this.cfg = this.cfg.extend(a); this.reset() }, reset: function () { q.reset.call(this); this._doReset() }, update: function (a) { this._append(a); this._process(); return this }, finalize: function (a) { a && this._append(a); return this._doFinalize() }, blockSize: 16, _createHelper: function (a) { return function (b, e) { return (new a.init(e)).finalize(b) } }, _createHmacHelper: function (a) {
+            return function (b, e) {
+              return (new n.HMAC.init(a,
+                e)).finalize(b)
+            }
+          }
+        }); var n = d.algo = {}; return d
+      }(Math);
+      (function () {
+        var u = CryptoJS, p = u.lib.WordArray; u.enc.Base64 = {
+          stringify: function (d) { var l = d.words, p = d.sigBytes, t = this._map; d.clamp(); d = []; for (var r = 0; r < p; r += 3)for (var w = (l[r >>> 2] >>> 24 - 8 * (r % 4) & 255) << 16 | (l[r + 1 >>> 2] >>> 24 - 8 * ((r + 1) % 4) & 255) << 8 | l[r + 2 >>> 2] >>> 24 - 8 * ((r + 2) % 4) & 255, v = 0; 4 > v && r + 0.75 * v < p; v++)d.push(t.charAt(w >>> 6 * (3 - v) & 63)); if (l = t.charAt(64)) for (; d.length % 4;)d.push(l); return d.join("") }, parse: function (d) {
+            var l = d.length, s = this._map, t = s.charAt(64); t && (t = d.indexOf(t), -1 != t && (l = t)); for (var t = [], r = 0, w = 0; w <
+              l; w++)if (w % 4) { var v = s.indexOf(d.charAt(w - 1)) << 2 * (w % 4), b = s.indexOf(d.charAt(w)) >>> 6 - 2 * (w % 4); t[r >>> 2] |= (v | b) << 24 - 8 * (r % 4); r++ } return p.create(t, r)
+          }, _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+        }
+      })();
+      (function (u) {
+        function p(b, n, a, c, e, j, k) { b = b + (n & a | ~n & c) + e + k; return (b << j | b >>> 32 - j) + n } function d(b, n, a, c, e, j, k) { b = b + (n & c | a & ~c) + e + k; return (b << j | b >>> 32 - j) + n } function l(b, n, a, c, e, j, k) { b = b + (n ^ a ^ c) + e + k; return (b << j | b >>> 32 - j) + n } function s(b, n, a, c, e, j, k) { b = b + (a ^ (n | ~c)) + e + k; return (b << j | b >>> 32 - j) + n } for (var t = CryptoJS, r = t.lib, w = r.WordArray, v = r.Hasher, r = t.algo, b = [], x = 0; 64 > x; x++)b[x] = 4294967296 * u.abs(u.sin(x + 1)) | 0; r = r.MD5 = v.extend({
+          _doReset: function () { this._hash = new w.init([1732584193, 4023233417, 2562383102, 271733878]) },
+          _doProcessBlock: function (q, n) {
+            for (var a = 0; 16 > a; a++) { var c = n + a, e = q[c]; q[c] = (e << 8 | e >>> 24) & 16711935 | (e << 24 | e >>> 8) & 4278255360 } var a = this._hash.words, c = q[n + 0], e = q[n + 1], j = q[n + 2], k = q[n + 3], z = q[n + 4], r = q[n + 5], t = q[n + 6], w = q[n + 7], v = q[n + 8], A = q[n + 9], B = q[n + 10], C = q[n + 11], u = q[n + 12], D = q[n + 13], E = q[n + 14], x = q[n + 15], f = a[0], m = a[1], g = a[2], h = a[3], f = p(f, m, g, h, c, 7, b[0]), h = p(h, f, m, g, e, 12, b[1]), g = p(g, h, f, m, j, 17, b[2]), m = p(m, g, h, f, k, 22, b[3]), f = p(f, m, g, h, z, 7, b[4]), h = p(h, f, m, g, r, 12, b[5]), g = p(g, h, f, m, t, 17, b[6]), m = p(m, g, h, f, w, 22, b[7]),
+              f = p(f, m, g, h, v, 7, b[8]), h = p(h, f, m, g, A, 12, b[9]), g = p(g, h, f, m, B, 17, b[10]), m = p(m, g, h, f, C, 22, b[11]), f = p(f, m, g, h, u, 7, b[12]), h = p(h, f, m, g, D, 12, b[13]), g = p(g, h, f, m, E, 17, b[14]), m = p(m, g, h, f, x, 22, b[15]), f = d(f, m, g, h, e, 5, b[16]), h = d(h, f, m, g, t, 9, b[17]), g = d(g, h, f, m, C, 14, b[18]), m = d(m, g, h, f, c, 20, b[19]), f = d(f, m, g, h, r, 5, b[20]), h = d(h, f, m, g, B, 9, b[21]), g = d(g, h, f, m, x, 14, b[22]), m = d(m, g, h, f, z, 20, b[23]), f = d(f, m, g, h, A, 5, b[24]), h = d(h, f, m, g, E, 9, b[25]), g = d(g, h, f, m, k, 14, b[26]), m = d(m, g, h, f, v, 20, b[27]), f = d(f, m, g, h, D, 5, b[28]), h = d(h, f,
+                m, g, j, 9, b[29]), g = d(g, h, f, m, w, 14, b[30]), m = d(m, g, h, f, u, 20, b[31]), f = l(f, m, g, h, r, 4, b[32]), h = l(h, f, m, g, v, 11, b[33]), g = l(g, h, f, m, C, 16, b[34]), m = l(m, g, h, f, E, 23, b[35]), f = l(f, m, g, h, e, 4, b[36]), h = l(h, f, m, g, z, 11, b[37]), g = l(g, h, f, m, w, 16, b[38]), m = l(m, g, h, f, B, 23, b[39]), f = l(f, m, g, h, D, 4, b[40]), h = l(h, f, m, g, c, 11, b[41]), g = l(g, h, f, m, k, 16, b[42]), m = l(m, g, h, f, t, 23, b[43]), f = l(f, m, g, h, A, 4, b[44]), h = l(h, f, m, g, u, 11, b[45]), g = l(g, h, f, m, x, 16, b[46]), m = l(m, g, h, f, j, 23, b[47]), f = s(f, m, g, h, c, 6, b[48]), h = s(h, f, m, g, w, 10, b[49]), g = s(g, h, f, m,
+                  E, 15, b[50]), m = s(m, g, h, f, r, 21, b[51]), f = s(f, m, g, h, u, 6, b[52]), h = s(h, f, m, g, k, 10, b[53]), g = s(g, h, f, m, B, 15, b[54]), m = s(m, g, h, f, e, 21, b[55]), f = s(f, m, g, h, v, 6, b[56]), h = s(h, f, m, g, x, 10, b[57]), g = s(g, h, f, m, t, 15, b[58]), m = s(m, g, h, f, D, 21, b[59]), f = s(f, m, g, h, z, 6, b[60]), h = s(h, f, m, g, C, 10, b[61]), g = s(g, h, f, m, j, 15, b[62]), m = s(m, g, h, f, A, 21, b[63]); a[0] = a[0] + f | 0; a[1] = a[1] + m | 0; a[2] = a[2] + g | 0; a[3] = a[3] + h | 0
+          }, _doFinalize: function () {
+            var b = this._data, n = b.words, a = 8 * this._nDataBytes, c = 8 * b.sigBytes; n[c >>> 5] |= 128 << 24 - c % 32; var e = u.floor(a /
+              4294967296); n[(c + 64 >>> 9 << 4) + 15] = (e << 8 | e >>> 24) & 16711935 | (e << 24 | e >>> 8) & 4278255360; n[(c + 64 >>> 9 << 4) + 14] = (a << 8 | a >>> 24) & 16711935 | (a << 24 | a >>> 8) & 4278255360; b.sigBytes = 4 * (n.length + 1); this._process(); b = this._hash; n = b.words; for (a = 0; 4 > a; a++)c = n[a], n[a] = (c << 8 | c >>> 24) & 16711935 | (c << 24 | c >>> 8) & 4278255360; return b
+          }, clone: function () { var b = v.clone.call(this); b._hash = this._hash.clone(); return b }
+        }); t.MD5 = v._createHelper(r); t.HmacMD5 = v._createHmacHelper(r)
+      })(Math);
+      (function () {
+        var u = CryptoJS, p = u.lib, d = p.Base, l = p.WordArray, p = u.algo, s = p.EvpKDF = d.extend({ cfg: d.extend({ keySize: 4, hasher: p.MD5, iterations: 1 }), init: function (d) { this.cfg = this.cfg.extend(d) }, compute: function (d, r) { for (var p = this.cfg, s = p.hasher.create(), b = l.create(), u = b.words, q = p.keySize, p = p.iterations; u.length < q;) { n && s.update(n); var n = s.update(d).finalize(r); s.reset(); for (var a = 1; a < p; a++)n = s.finalize(n), s.reset(); b.concat(n) } b.sigBytes = 4 * q; return b } }); u.EvpKDF = function (d, l, p) {
+          return s.create(p).compute(d,
+            l)
+        }
+      })();
+      CryptoJS.lib.Cipher || function (u) {
+        var p = CryptoJS, d = p.lib, l = d.Base, s = d.WordArray, t = d.BufferedBlockAlgorithm, r = p.enc.Base64, w = p.algo.EvpKDF, v = d.Cipher = t.extend({
+          cfg: l.extend(), createEncryptor: function (e, a) { return this.create(this._ENC_XFORM_MODE, e, a) }, createDecryptor: function (e, a) { return this.create(this._DEC_XFORM_MODE, e, a) }, init: function (e, a, b) { this.cfg = this.cfg.extend(b); this._xformMode = e; this._key = a; this.reset() }, reset: function () { t.reset.call(this); this._doReset() }, process: function (e) { this._append(e); return this._process() },
+          finalize: function (e) { e && this._append(e); return this._doFinalize() }, keySize: 4, ivSize: 4, _ENC_XFORM_MODE: 1, _DEC_XFORM_MODE: 2, _createHelper: function (e) { return { encrypt: function (b, k, d) { return ("string" == typeof k ? c : a).encrypt(e, b, k, d) }, decrypt: function (b, k, d) { return ("string" == typeof k ? c : a).decrypt(e, b, k, d) } } }
+        }); d.StreamCipher = v.extend({ _doFinalize: function () { return this._process(!0) }, blockSize: 1 }); var b = p.mode = {}, x = function (e, a, b) {
+          var c = this._iv; c ? this._iv = u : c = this._prevBlock; for (var d = 0; d < b; d++)e[a + d] ^=
+            c[d]
+        }, q = (d.BlockCipherMode = l.extend({ createEncryptor: function (e, a) { return this.Encryptor.create(e, a) }, createDecryptor: function (e, a) { return this.Decryptor.create(e, a) }, init: function (e, a) { this._cipher = e; this._iv = a } })).extend(); q.Encryptor = q.extend({ processBlock: function (e, a) { var b = this._cipher, c = b.blockSize; x.call(this, e, a, c); b.encryptBlock(e, a); this._prevBlock = e.slice(a, a + c) } }); q.Decryptor = q.extend({
+          processBlock: function (e, a) {
+            var b = this._cipher, c = b.blockSize, d = e.slice(a, a + c); b.decryptBlock(e, a); x.call(this,
+              e, a, c); this._prevBlock = d
+          }
+        }); b = b.CBC = q; q = (p.pad = {}).Pkcs7 = { pad: function (a, b) { for (var c = 4 * b, c = c - a.sigBytes % c, d = c << 24 | c << 16 | c << 8 | c, l = [], n = 0; n < c; n += 4)l.push(d); c = s.create(l, c); a.concat(c) }, unpad: function (a) { a.sigBytes -= a.words[a.sigBytes - 1 >>> 2] & 255 } }; d.BlockCipher = v.extend({
+          cfg: v.cfg.extend({ mode: b, padding: q }), reset: function () {
+            v.reset.call(this); var a = this.cfg, b = a.iv, a = a.mode; if (this._xformMode == this._ENC_XFORM_MODE) var c = a.createEncryptor; else c = a.createDecryptor, this._minBufferSize = 1; this._mode = c.call(a,
+              this, b && b.words)
+          }, _doProcessBlock: function (a, b) { this._mode.processBlock(a, b) }, _doFinalize: function () { var a = this.cfg.padding; if (this._xformMode == this._ENC_XFORM_MODE) { a.pad(this._data, this.blockSize); var b = this._process(!0) } else b = this._process(!0), a.unpad(b); return b }, blockSize: 4
+        }); var n = d.CipherParams = l.extend({ init: function (a) { this.mixIn(a) }, toString: function (a) { return (a || this.formatter).stringify(this) } }), b = (p.format = {}).OpenSSL = {
+          stringify: function (a) {
+            var b = a.ciphertext; a = a.salt; return (a ? s.create([1398893684,
+              1701076831]).concat(a).concat(b) : b).toString(r)
+          }, parse: function (a) { a = r.parse(a); var b = a.words; if (1398893684 == b[0] && 1701076831 == b[1]) { var c = s.create(b.slice(2, 4)); b.splice(0, 4); a.sigBytes -= 16 } return n.create({ ciphertext: a, salt: c }) }
+        }, a = d.SerializableCipher = l.extend({
+          cfg: l.extend({ format: b }), encrypt: function (a, b, c, d) { d = this.cfg.extend(d); var l = a.createEncryptor(c, d); b = l.finalize(b); l = l.cfg; return n.create({ ciphertext: b, key: c, iv: l.iv, algorithm: a, mode: l.mode, padding: l.padding, blockSize: a.blockSize, formatter: d.format }) },
+          decrypt: function (a, b, c, d) { d = this.cfg.extend(d); b = this._parse(b, d.format); return a.createDecryptor(c, d).finalize(b.ciphertext) }, _parse: function (a, b) { return "string" == typeof a ? b.parse(a, this) : a }
+        }), p = (p.kdf = {}).OpenSSL = { execute: function (a, b, c, d) { d || (d = s.random(8)); a = w.create({ keySize: b + c }).compute(a, d); c = s.create(a.words.slice(b), 4 * c); a.sigBytes = 4 * b; return n.create({ key: a, iv: c, salt: d }) } }, c = d.PasswordBasedCipher = a.extend({
+          cfg: a.cfg.extend({ kdf: p }), encrypt: function (b, c, d, l) {
+            l = this.cfg.extend(l); d = l.kdf.execute(d,
+              b.keySize, b.ivSize); l.iv = d.iv; b = a.encrypt.call(this, b, c, d.key, l); b.mixIn(d); return b
+          }, decrypt: function (b, c, d, l) { l = this.cfg.extend(l); c = this._parse(c, l.format); d = l.kdf.execute(d, b.keySize, b.ivSize, c.salt); l.iv = d.iv; return a.decrypt.call(this, b, c, d.key, l) }
+        })
+      }();
+      (function () {
+        for (var u = CryptoJS, p = u.lib.BlockCipher, d = u.algo, l = [], s = [], t = [], r = [], w = [], v = [], b = [], x = [], q = [], n = [], a = [], c = 0; 256 > c; c++)a[c] = 128 > c ? c << 1 : c << 1 ^ 283; for (var e = 0, j = 0, c = 0; 256 > c; c++) { var k = j ^ j << 1 ^ j << 2 ^ j << 3 ^ j << 4, k = k >>> 8 ^ k & 255 ^ 99; l[e] = k; s[k] = e; var z = a[e], F = a[z], G = a[F], y = 257 * a[k] ^ 16843008 * k; t[e] = y << 24 | y >>> 8; r[e] = y << 16 | y >>> 16; w[e] = y << 8 | y >>> 24; v[e] = y; y = 16843009 * G ^ 65537 * F ^ 257 * z ^ 16843008 * e; b[k] = y << 24 | y >>> 8; x[k] = y << 16 | y >>> 16; q[k] = y << 8 | y >>> 24; n[k] = y; e ? (e = z ^ a[a[a[G ^ z]]], j ^= a[a[j]]) : e = j = 1 } var H = [0, 1, 2, 4, 8,
+          16, 32, 64, 128, 27, 54], d = d.AES = p.extend({
+            _doReset: function () {
+              for (var a = this._key, c = a.words, d = a.sigBytes / 4, a = 4 * ((this._nRounds = d + 6) + 1), e = this._keySchedule = [], j = 0; j < a; j++)if (j < d) e[j] = c[j]; else { var k = e[j - 1]; j % d ? 6 < d && 4 == j % d && (k = l[k >>> 24] << 24 | l[k >>> 16 & 255] << 16 | l[k >>> 8 & 255] << 8 | l[k & 255]) : (k = k << 8 | k >>> 24, k = l[k >>> 24] << 24 | l[k >>> 16 & 255] << 16 | l[k >>> 8 & 255] << 8 | l[k & 255], k ^= H[j / d | 0] << 24); e[j] = e[j - d] ^ k } c = this._invKeySchedule = []; for (d = 0; d < a; d++)j = a - d, k = d % 4 ? e[j] : e[j - 4], c[d] = 4 > d || 4 >= j ? k : b[l[k >>> 24]] ^ x[l[k >>> 16 & 255]] ^ q[l[k >>>
+                8 & 255]] ^ n[l[k & 255]]
+            }, encryptBlock: function (a, b) { this._doCryptBlock(a, b, this._keySchedule, t, r, w, v, l) }, decryptBlock: function (a, c) { var d = a[c + 1]; a[c + 1] = a[c + 3]; a[c + 3] = d; this._doCryptBlock(a, c, this._invKeySchedule, b, x, q, n, s); d = a[c + 1]; a[c + 1] = a[c + 3]; a[c + 3] = d }, _doCryptBlock: function (a, b, c, d, e, j, l, f) {
+              for (var m = this._nRounds, g = a[b] ^ c[0], h = a[b + 1] ^ c[1], k = a[b + 2] ^ c[2], n = a[b + 3] ^ c[3], p = 4, r = 1; r < m; r++)var q = d[g >>> 24] ^ e[h >>> 16 & 255] ^ j[k >>> 8 & 255] ^ l[n & 255] ^ c[p++], s = d[h >>> 24] ^ e[k >>> 16 & 255] ^ j[n >>> 8 & 255] ^ l[g & 255] ^ c[p++], t =
+                d[k >>> 24] ^ e[n >>> 16 & 255] ^ j[g >>> 8 & 255] ^ l[h & 255] ^ c[p++], n = d[n >>> 24] ^ e[g >>> 16 & 255] ^ j[h >>> 8 & 255] ^ l[k & 255] ^ c[p++], g = q, h = s, k = t; q = (f[g >>> 24] << 24 | f[h >>> 16 & 255] << 16 | f[k >>> 8 & 255] << 8 | f[n & 255]) ^ c[p++]; s = (f[h >>> 24] << 24 | f[k >>> 16 & 255] << 16 | f[n >>> 8 & 255] << 8 | f[g & 255]) ^ c[p++]; t = (f[k >>> 24] << 24 | f[n >>> 16 & 255] << 16 | f[g >>> 8 & 255] << 8 | f[h & 255]) ^ c[p++]; n = (f[n >>> 24] << 24 | f[g >>> 16 & 255] << 16 | f[h >>> 8 & 255] << 8 | f[k & 255]) ^ c[p++]; a[b] = q; a[b + 1] = s; a[b + 2] = t; a[b + 3] = n
+            }, keySize: 8
+          }); u.AES = p._createHelper(d)
+      })();
+      var content = "U2FsdGVkX19LKO9CwwpEtH4yRKm1R6nZjG/D/EoDcksdHCVnKJ4mKP+T6ihKR1nuianuXMjCICkCKaN8YCGajhJZfKvsJ9RrcEX7eFL/K0w6hDZycGz/amXP5WXwWWjIjPDjntNHSd2rwT+UKvxPR9OKbCnMlMO8vz1fUHCi5y4znNIBlUI9lhuuaVj0UXhO2/E2DWRynqCuwruG7Rl2qxFGmKgXvWSg/bzqMW+BwFwgGAHaj0Jit3JkiMDdTgE3sEfSDfyhJsDDjiiP5YtD0Ke0O6Q33+Zy3S70J3BInRL999h41egTp4h7WDVGLr0boUgLpFEsH6j65sPifmsdwtJ912pQg4uSEbwgFfW6AO5qLevTajEYGyP31KtigzYcuW0/vb16dD3KnNlyh3fLBXlkRmcTtzVCez0kplnwX3eL+g4uIxfQS7hpOCS/cV/sfIDFKPnsJ53lLKQgBjzq+rtyGAagZCe+gEmvyhnt8yrcCX1YrQd6QUpc+uyehl8RP1TtAyJtuDTT+51SqA0pAZNlDF9WIrev49tNvN3F89bvWd1Kx/FGLK27whTWUiJpxcHY9Y5juGn3R/M+1zh6YyqsjaiSC3Dj4DaejvVoli0a9C+VHVQdF9Br7bkH8dYskVAb/CgOJgXk1w3A8t/B+4Jc9iiDK7k8KygNMSnjxj5bsD8twrcSsNgxkE+QwU+HukaO7PFw3OvUAbr52lyMgMZ1g0AHrNeNyh43p0TPbJ8TrmgNNciNHZHNM0aJwkDoAFX1mSNXXYp1JSvS9NAnHTCIY2fDZs2SuLHA8Wc9yY5vQjgjI0x0nsJa9hTox0mR7vzzTCRywUSuUqLNZrA3MymGC45NUB9oJaqCH1ukKB6hndGRPMgqR/20vm8TH8v15qeKgZ10anUzISR/Ti49PFlVGd1rrUXthfPB5tgtRoPBRY//gTJngXTjzz5pcwmXPW7+jYtt3EMSKqF5mI52mJlC9px7+KCqBzwe1uNkdrApe5x7EPP6JMJSeG7xxYoF6JLUiJa/aW7nujnlzqCBEwPgan3WFi5JXznbv7jZXTxcbc+1C54S+TKNCsPJ+z7njITqmKutyhT2i3NlvtWZXTUdQ7YY6zVOThpX+ViVnud9B8xO0vm3+4Cp09dyKli4tYa6IoQ9C94lzolQqKHzkmw0NP/bsQvp28QXKBtUIVxz2jgg04cDZiqt7AuY8X73U3wX/V+bs3U7yW+eitNVJyk4Kc99isc7jehsxWDw3rVyBjQvO0LZN+8wBKjzwsMmNDRFSdCMk8QAmvFBZoV998/DjFqFADzL17ctSqyBhPRd5ZiRkAOZhREZTGoMnkqkS8x1A5PTF7IazTH2cxoYg81YWIKIPX9Hf1bgRdkmb6mMeFO4HxJxMMveyWMEgKoSVdFBPhmQcSmpXnl3LHsOAHnahfIiwEIBFwgpUKFPpxitI4aMSnI0e/exkCkUeyK/OCbOvx+cHQ+P5LA6n5uR2wDeEYanbiipJ4PZlFOFJLUWqIvbu76vlcMUlCTVVSXSX0F/7sXBTxb7VUfFZJ9XOs2RjblYaw84ITAuPnd0ywmEwHqTChnXdCymGUpo1MltjqACU/9R5WgYUP8F/aBpFYtVkE2Qx7RH9+hOmmnhk5de4EOSDqLdTDro5TUnAIAYX0Jo2z7ekZExHOTLzQ1WdEbc1CUSYJrwsrWu/0pMDduk6UG6irWSlcjeZphv/aiIO6Gr/SjffECjGfpQQX0F+mH4HalOzI3PV8Eort3wLh7OkwzHEDcDGNIg8Ramp7Gni9htF5kc6nIsYpnkkv2AGBAEQMBZRFF1LEQXeKpV8Zg2/FofrfPcadz3RdUNt92fP8CABOgbuvBhm+peC1N+3eznlJ7XSFkI8o5GqwcsV/7O79VFKj4l3UY3dpR6q+c3QdYlFZe6CwAYL+RUHYJozHk8OW5FWa2XamNJHHYbW43+UjpdpgnSnWtgZEX2uebS3+5QLHPeiebXEwqHtNu0kpC4ionnNSXfeChem6ldaPoVmXW/BtKPX8m36zyQmIb2GgoQYG5VJhhDtJSmP3aOBjuf0BIbX5bQ7Zv3qOD1k/39O2rQP2+mAoBlaeK0+IJrvDL2cIRFBlj7SHHO0dL8vX7MV4dUt6jBqcLA9UXw9MD8kGes90W9ZzedHGXwwRmvFjnvRI9p6cIVkHlwed4DQwB/DxkwHWuxLzwInpg5T6HdTNA+/JFGRwqR9ZM4whoet7nqExQVMB3jc6VXtARHVh8PgUy7LHLtwG+adTH1mLThhMgfz1Q0y0mZTruLNQFz0WsMxvN7FGmJWR2u/wON5y7zlCebxbQRdpLi1cuqh9UsxC+Fym6SAlrJoFbSMtNmSqIfbaDEbJskZ4K2sDvVQ02dJkZoePC0WgeizGk7qHRhe2urnNwy4hMNc5uug1DOtrMLPOMnobuaNeifi1NCvHbK5L5t6xq3kQ77+ugL+NbRpDVbUx11cFLzCrZQp8DMqCCPmfrNlDEoyRemVR5Aet1QbiRN1Z5jxL5R7JgapfRV3l4D9g7p8uJ3wAuOvLUv57IgKSiNG5ByIAUpmhrygL9pl0Ir9KtMmG4eyfIffU/VVmWKZDujwPeqAx3REruy68PCcnw9hPkWISCohcMw1E6P46jag2Pbik5qkwq0xb/XV1lziuSqJbxE8WbacASWujKuc6KQVSYNFYt+GJcy1FDxrXDfB8tICIUojwjl5gkmYIuSU/Na9Pl7rDsjP2j+24FcJkKkcMyw8wUml/ox13Z15yVSUKeqlR+8jxXb/gRCK3QC7UXL2ibCoM6ufc1tU1l0vVhWJnkMSOwg+VZXWda0e4o30uJiqgUg/qvpzBb+LYZytlHYZhpoIaaqwKRrM7p53wwHTKUgB04h+TPFZ93wvecSbCoG6Yn2bIaK6NQ4w15mLkCp+Tzx46U2MWdoM6XZIGv4IyesZF+2VRMOA1U3o+Q0hIZZUqc2qonUtBTWHaWioCQhfmF7Q8Az1YY8vFM2qMKW8Q2appI8DFwWLmjeqhLLeAYf8W2SNWUThnzMYASVCMV9+/yWG/yejsqC3kNA19C1okEIy+eDcWSUSv1qltEts7R+KsDsjWCgrk9ZVpQpi6yLYr3K0nLGgkBBpfgdWh5oO956u6FuexAfMlJdFOs27jqUrYUjyQ+fdfPIpZzxwOnwdrLOzuufmqqQSnxR+2uo9dlQGOvaLwOKBgUB4CcfxF6GVNVkKoJvKdAEkceZN/nfmDzGlDEL5tUajn1htmlu5niYOkbPE0MRkHEpYGv/tBP+mGwfQJf8ahFOZm5SXwdzWgI1EqwGql5bIVaU1yYqyui+LCBriIJ/FMnZVvAZg4aSAZPY/fHyxh3+LvYxgGJw96JNUVTUWe/oFl5ze+6qdrf+jzYN6obkIIdAu9c5/SVHq/IvfArX5DIg2+UMLACrlT6BtxsvqvdZ3ok30hTTxZ7d1+nGdHwHt384R3427MUAQFA6CKg1cuLK/T2yGetTqIaBhBMm97QvNYz79/NLe0qWPypd1QyNM+xe8Pk8UCrxFpRv/avw8IKlchd8Od3C+t4EP1cItrYQuzmdBNZSAJhGWuS7Eq3IPVorrCCSHdM+3YMkbgfZyoJTZonFDwo8PqaZjH7T7ez695O72k1OY+qf3UT5qTyHyqKnZ60o440o5PWSG4PoVHTC0+NCqo1g9/2qoDGRPuDh4FiRyWgK77BgiOD+CGa1WgIxPjU8gWsND3fJ24y3z6xlE/uR3ng4nUrP0PgiLhpTxBNIBy3pxUdUYcgN5yjOFj22TJtASmgjEKrewg78pruxdfM9hWvs0dYuI5kHg4GGFNPY+KDO4p5uhcGc5SRAifVfkHgK//9YRrjEfEEQAmkFNTB7MMx4niItfHrCRlIwWZpButm9MD27TD2Y5RFsVRm28ilUZsn80efQAqOQykR8mVSR7/JO4BLI83kk2LJS8TVnuKzGvEdn2D6ihMUHTDH+yVF501+3pWebUWwlkxRvqF0nBohme0Cl6xzc1EHuf0RF/lhBeGvnmqdhXFzrotI1ZdAAntcCwH8oYn7ARJZvRxGOXGgjaCjeIGTjnaP+zm123PimmStJ1HGq76ffzPS8LFC6nagZWMpZqvY9QP3d5Wa6ovRoK96CNfLSxUcaBSCIMvEbWouh+2VpNukF5PGnYrh0OrHB0nVjhv4d/ae//iTJnKLQrspkb9BUurvOozfnDg1QGXfF9SN40CDBV98adIqugZdDKdVmFf2DJ9Ce0bjCxSgnB3+JCH7PVaHYbXu2AtnbnIGSbXA7Uw9InxKQraEUhl72UnPxYjglG8VU+zHCBqhFn0fkweChFKMm0gvhRYLeD0R8fSbIjvBavXazdG6psMpdUIBjkaylZvGh6hfM34EIbSli0lHZiq3/+PzDLtsagnILv2MJ5/glhWHpyx4n1wWXpGITK0BOZ3xuB7zJ46D2eBQgzsuOXARAZhkqy2m18O7ru3RXdmpGg09edIjnjlt3Y2EdfK5AyzCr9pSJDWPhiREhSQxl7IP7S1ZJT8xsozTRj64bjEczvWOrwDp617pRX+yPL/zzlZUWrDZrK2cNB3s9HpGLeC/8AsNRelloI+GtRI1uWMQrJdYVUkx4omhwgz/u9EDBwkG1Km1rOpC7iVXCsw2sJLr/9GIWV9JGldG0c0DsqNdmG9K+zt/hQTGbXaf77EBjQxbQ1UqUwpzlxkMCKproA+hD1Xji+rwBkbeiBlTghA7X0e1uRbHuPsMqjNXKHvUMNUGMJomJr9Pb0/iBGcVy2o3UWBb3e8EmqEm3RATXNMOeuKf5EbOgNphsm+Ic37se94E8UwAcvgO1KOOexRqDgUKNFGojq5rJkWGj5gidmIN+VUTFtuSIub130YFbGkEIk7XZIvqMKFZry6KQQI4MP1Ullfc0LdLo8o7ZXo//DifnEcb83M4P0wHCjE5Im0dnuLn6WluK0G+eTSlwJo1XuPtFKw9eMQLEj16yG0krnEUu2rPScQbjIit53cmEm505vNFJvfRHOdIpMcxoWDESNw2ljmGMocpourZlZALGWYV6mGYkFX2h3ytXeMt5i7GpZ47jN/3yR4vQlT6F0rlcFaC3IT2xvqG7NFQuUnajjKTRxxL1COQPM/d8Qim4fGPraCz0pJeGl2s0OPZNyqn2wpbIcsu5hsMhVodoiGVYtbE5X0+g56VnEVfUvmJ3qGtWJDHhdCU12p4AkLPOt1mwvYXKVaRlKexfC0CLouF9+pLLyi14haysX1hlkTsM7+4n9XkMSXyGQPF+zRCRLyw/WzTYNjuQ78uZt3YxUPJ0JPV/aiV/yUf69EJR7u76GJ+VirRAZ0JBhKSgIB30mM+vFm2b01EI68JjFNQ0kJtavs7MOIOLTCi7Nj/YHU1ypKyB4l7sr/tJgTjsDkb3FprTjFcY40bHcpRA6rYgAlAWDCHE/dHI7g7eBimN+GLqimuJRx0sbpCtelNlqOPL0BClxwsEChHMYwBNlxoaAj3xnW/nFryFFiWuJ6PD3S55eruIjdaCEayKVmX8bUHuVNzDq1nWBGCxeq/7uEnhiaJnITOhnDjZ8PdCpKBJ7tLSUfZemTAKK1XC95EiRY4O1J4xxZkLAuLSuRtC+CNFtMCKyUdGTj7FMomwDVqz/nfKAJZOAxYYr7uPPlF9VMtkP8t5wjdHo/LVzWxTqH5W9Fmk37otyi68ifrPvFPr/UiiqTV2s5N21qM5PkUOPpp4kQJJaj7ZzMw9TvndTI7sWqVk5COH/QS4dPU0c6/IF78m3R4murCoHHaLqarQYpQWGSMlco7NTYnU6WwfaH4xgxz4gyiMQ/Xvk5bgvG11anK4Ub+qPi4mnQDIESH7EK2XAzTy+3zTopje7fMjm6WMmmigThW+gQOUrJSItNxjw3cebGmIJXRlh2kp8H0cweRtedW3NRYiggt/B4HFpQYsRYnSqTkL2uI4VLoqW/lE8hW2+WglqWRzbeqdPCXoZUHvdbZtBuWR8OV7bKUmzN4Gy/hI0MOzPxGbdFZJQw1DUuIkfuGiBRlKk6oho3KpwVGGIEQX6ll7ITU22atmNxMBwSuRJJ7DiWGb2lSS1ozhLsHDP1HXtDTcHjF+uS2vre42cGxCCjvYF1l5aBgQcTZmnj7eotSEGJ8ikLPin6QW/bqmczKfXDFkbszGgwBLuJFq1p3sR86/lbiuju6zoEWVF2d4tQbjFKFVnQ1CdsTfo5cn4eMzx6XDbsJCZNud0f93c/A8AYwa/wm7sjpy9tVTvEwKRihlIiLRZ5q8BlOE9drPd4pwaEBYP7YIFKwnUS+O0gfM8oKFIMk22FnA4h8EHdELMLaEFN22Lh68bSTRGdoh/5yrLPOd2gkY/ipCmIOCueycwJbcgl3z+bZXMqqQFMCVCI+mp8JRP9QTCO8g9d4fF9NLmsJZLYWp3RQmgfoXsEvBwKxD3Q0k2L9PmIaQNjwIHcy4cAYKTu9InaMOmeW9K29hXtTTDcwA6gXHD/2HEiyeaBhpUr6SpjbRlK3fxB0zKYNiM4aknSuh4t8rDa2n0m5bdXqtwyyjc+TGvZPODJ0kwhkNrXkHWvkKbxppZTwO9uU0EunEUDPaPELTWDf7qoihQd8BkAKLe4OzlghD8arwS1RE2DAiYffItLuSdcZDAkBoK/NoHhZ/agsiiAoTsLnGh2tc8NGBHspnvlNK62CLhHVqNO9DuYwMpZoLOBQ1vk0fcwLzjrADeND5kF3mq1Gpc8pWjOil2YKWnZgU+4x7SUf06T676AWdIj0qA8TJOzMYIiXcNcrqTVx3hwgHXxa0qptgND2IB2QwL8RJAFAY8FnhY/Gv0/UmTJCeslq5G3t4oum/EllDleYbxosR2REj/tkB+JpWkAFyohDbZCXBrAx9GbiWWk1/u0ef+7t8Kah8bVGqicmuSasHpiYXGPg+LbtBt3uLgCfYSazltvNE70AkkE5jvhhEdG+uc/ySzAlZKaC4poAiAsLqKoDkjd4AfJVBjjMtUagB1Kl5CRIPpVVK7BDZDdnTWNC+Sf4AzQAmZtEAC3x4UVLO+Gp+QjAKByIaatsATt6hYv5192KvJORTGuJz/unQqjvNqZuGyIdgtoM8sx/Uv91xsmunEiI8Y82qqeJbH0v1h/we14e8ULcs9LE3m8RQ//Hokk4VSErPBsndJ2RLtMCXZCVsMHUN+So9OQ7Yw3MVeNWs5dbndk0Sif8ScQcktze2Ns+L1fFFqID98+oOu75IRXQz95begfdAikAHJfKhDBbz69tf4upZzYEmtGQjSGaEjrojbSKCqg4rgu64DifpLiL5EtabdtksaKJyj383PTpM+XLo6u6cIenEJumslyB0HQxO2Qs8F6+Vo+6RM6SDIfrPA4ynZ9S5SUXY1GOK0QknkZB7dZYuNriKhZC5amIONxZ2nF/nhdqcwHSwCGeyPU0UMBArkhESwrQDCI7D3SE/wJ0nGseQQk90+5x5EAg0B8FAJMvIRQivz/yE8a6qurCD1kmbA9i9HYIvZjWB6BN5Ahj34Y9OcJyhgzI8IqWfA0F/2Eem5Xz+eLeBa/ES0AwhUOSUs2qoKRnXBvN8Dze0MY6IacaQJmfcYRtRG8Sk7AK4AhYbAZtD3UCLKEY1bYOdIVVFZ26GICBBIDJTxwyTi8bI77V7LmawyveP24RpS+/LJJVRvK6bKPZJdZb2TOCbbA2SAkRTUs68dte7dESo6CatnkWvMNqcNJ+hrDnMcaVBbmCnDoal4Lc/mlWbpUJw8Z4yDcM+Pk/SRJJ9H/stnDl6UEr3uTp0hRjLjSL8Y70TJG4HnEW1qjJl8vG8dkU/GMbOg96oYFD6wBCbClSRgQsO3faaQ3zC29QGnN61/ioLmejpt5+9zmBi2lXWXpt5p8ND61xdWGGPKXnGR4zONtRZVtIzl65xd5KBdzBTC9wVviscgECP3ILIg1+fhp2UGxOQbuZgJJ6yrQs3iCLRkRzoJwibCnIVsvC9IeLX/Bw2IG441Q9zq9SqaKS678GEuvssYX2oXSmTEYqNIQzy54q2gtDqAFvQT2ooVHAwei4oKXbM6VPf4x7THEwkYNHGVWkNdm69F3DP2X/VMdojwFoyOJIHeh/ktbqk2UwgKV8AkKfspKY9k4tl6guXnEE1GbmTVTjC6Yxu9fAc5kI2YEykPYKWbZYs/gT1RoFAGTyvg1hhwCbtDaMs96O8MKWoL/EIGMFP/9ug2I1u8FpcS8/4G+Kur3xYRfcglUl4rOvWmJNDmJ+EEowiDXWeuu4qWSNSTdQi8e+sjHY4xIz3KfTwuvh7gdE02wpGQ/YG7TQReRoU+L2CpG3ZT31ZKWXbDzprjor01DJ+0UZ3HkSwd561M5JOFB1Kg5X+vzhbK3FZH5OCyI/RETBPycJ4+i3t1MsSpnoO/ylU6SVOVYcNNC4D9o0sFEICIq/2KStMieSUD5YQZ2A/K+/L+YMrRWe23hPvjnMG8eardUxlqzZRY3iZxI62CgAufKk85iqqv80wZ0iUxrScV9FuqObQkVTSn5FfGWeH+glZwquwk67LlLCNQXapGTsuVmacDG+V+z6KVP7XEtZBqObUvapJ0CdDf5e7jdO8uYgKGbnYDrcSOsblhmSqFpnOxSjLFgsIwAYvbiojNazvSLToTc4lK8dFRO/b7BHMaqP3sTEZT8FcXJgLhvc9P1icH8mO4012vaM53dt7Q7ClE9AYr69TxPH40PNfX4kO9Dhzb3WwLbCsHuEfYLk1GzTwnMZBOCsGXSjPkH/yHf7GlGKyriUwr7q6dHnbOOP6rk30ww0y959eNTcEEvnDIOD+p2D4XB/wdIVXpKDKdvb50U5BS8ivzWxPvtStREwJfxGwH74ja1nioNKMOSsKuQ30fplVSIkbEhg5Xk13k7PP3VTlDQn3x0eeLS0RYRmRv+FvR+IMtQkR9p/BD+VTYfBdy3jTX41bAQRpNwPiamaNrBoJd/++kgqZz1zTkxgeTZ5fbtkrvptpRvCKmsnA8xXqWBL7QpAG5bNgjBrVlrdsLlU3nbDN9d8TN19JnbRimiLlXbISwSwb1gkjeR0AeUE+RPBrx5m06LXr8TSamXqIwa6gftKqwe2LCAx2Rp4LqJI4SJBp+0miUXPcbrCGDDU43K2QL32gM5+ggb+MP5gEqnYBsd+Ok63GnHxw0LtP8SJ1aGA1MAiQp8bAryLs9rJoi8Mqd1EMWSsgOI5IK7iet5Vsw3ATgoB9+JmRsZ2EjKSdkqKDgWIjeRQuXSO8y/lqDAjU6GtjSfATeaYroE0fILrY9Q8P/Qc0XLJoiT+Vynd+fqluH49hhuC4DXE4GF0YNS3VyyvB2m7Q6o8FnB/xEFpXt0g1d4R85wWIA+OI7EFZJqXAp28rbRZ0mQlfoeKM4qUYTkb60jMXtQPP4fabXy6QVX77mQaciwDNYKT/MeX3+0TNPAuJSDdzi0fSwQnI6VW2c4rDkn1kNsHfZzuxlmwxyBAecaoblz1hzeVzrXxlEIM1Bs1LKXoVYaPqWr8i34HXJAKE36hVkC7f9AD5R/ZzUhqkqMMKk1osapCqDfbYoA/1h5vE8D9P2oMvQp5cfyDkwCxNddffqkSZxVDkVo08uQkmzGLmSGIB+NuH5ls76WTmEMeurRFU/0ZzYo+t8qw/cL+j3guATkMUY22XwXAOEaWLwZ59fN7uWukTdtn2upBemUj916SEo+S6HQCQQrxICeSmQrMigwdzCPGiXd/GOu3UG/u/Co/AnIP2GTwjfV+wBmeciSI+mzMNTHb+u2r5dWlCYU8D6xMXOUA3d7SdewLGY/+mqOSgRhtLNaEo4+fvLuzv9bs/lyEfdcc4fEcS2Q9HwaTssC1aEAKaUDJOO/q1KPcKv6o1WZyas3CxWYLgZenSPC4cIL0KdrHf+2PUD9aVchQvqRP1LVtpxT1hJ2rE46qgnX8N1HKDFWbzgKdLSAxTLmtUjwAXamvZ+MYelFTfDpRjuRImDlnqo2K1Rgs4Io9LxGOKWid2ifL9QFkHlVOvOvIJ9Y/18cY8DR00N6vmRxRTBPvYuaCksKmM6wsDsbEwifEfgzdfgcEMg+x8lnFYWEeINIRMP6n4GpGnK6A1mgOTAf4Gl2bQ3uJrdbJ+qmGG9rvabIGRd//e8nw0Gunp+rHClnuQ+bewjYO5UvGtEClfl/bbnFcj3GDY/d5re0n+eKpGxWgZZxUhzmp5z8vgxJysJh69cHHhwp/wkySokKh1rx6fs9ERtUzzzwBxwmGHkH/xSJF1K8KMMUIIkFETY/aT2wcbn7soqUOzFSZ53RaHW6PufdlSQ+8cHR9jyi1V7T4gEdNjb7qH+9F96dlc8WNYjcTKB5gZ6HOpq7Vv1CPunRfpnU6YqwBFJ8wrnypUFbK9oKMuIFHN2X7Anl/j/Oru7YfN2b/mSTlBe3CLazg4j2AaSULGekAx05UAlxfO9iHz+D54Z3b2ueloncDftk4HZg7VF3Vns2xB0Izmm+HDQYZVPy4hDsYqnEciD0OXafoO1hCSqwBI0kdCaPjflK9d9xttziZ3NC5Aprk8QOJzfpr9zHiNX+nm2RwN5AO53NcUZs0eSuO05pJcP1bmiOgd3/SoTByPCZymEOlgI0Q3zFuh0JmitAtfuPyDQf3zVoF7EtoN8NGOxSNI7rYSKI87XRj/Y1trvZdyvJTklyjl8XLTe9vdaSE06vthE3MNQXH2MDI88LUXokTrEidzvUfp4tJ2biegCBCa8KNS1HZO0n78J3vWRiSt+orH6v+7kfTxxaFGX8iQOzMxQRtKlOXS6Ne40xfn8XhIbvNk0Ac5ZhdIyYnZAf2Hrc8MckR4xlUKHbAINGwWM++ldl2QroeGbGBYXORiYCW5SCk5oOyvF1fi0SiOaokPgtZPf5vdep6UkNyxlEbxTcvphmky6wNsJwQTHOzJp3gcFYhoYIg7R+NCDUm+QFfSpCPurttLZMf5wg++F1GMgNHm3tqtb9MsBHm5py78i4I+Zuv44qqhxhFDPFUlN/5Qrop1SMQv66mhI3VTafAtIMvu3AJv2QlEtswouEJkc60A4Jg8NNzZTFz6OsKhEendmwwzzihrcBBuQURqJxVY2Hv1aniTJ+bfnIckDtktYMzE17C9L10WmfRgodp9jyGGANPxVjiUsihRpPm8R4spiBpp7no5CKimhhS6rNwn8ESUGoEjclBwyD9zzwDeRAH2l561anZa8tpIELrvO5Soa8bo3tgly5kyrjeT+J6k8tifBNAXnQv4uDJ9j5cMU2ISoWMKgwofG6VTgsh+aLDOvk8joVNWyKKPM8ubuzcdqyYbkpijXrlYZGLczHMty6ZwRS/oQ/cv1KqKVz/iS8liaFUVWE5E4UQCKkatO/qKXpsVgif/kYS8UZR9naOLZkj00LYp4zFcHMrsI6hulpE5VrFn9eqFqW+f28DIsPJcdVG4LgE/ZyF7APC9eOndoGI0lh+7eCZDuI6kjpY9AJt+orC09DjWKxMN7pUX3byuBRgwbikj6cbuXZaNLJW/h+JBy6CAJa4I6CqGaK203gW7nfDpbvQGrsHNIzjYaNyKuizU6F+gjcpqsKrGrp5MfVT4nCWcpd1D9xpTYsRb8CoGtMDXgN5fE0jQ+9EGnegcztLDqX/ajiolbSocjqoripK0QOOn2peF7nOdq0suZvuDQwVvKLHd3Yrv/85Wx0+a1gDTxXN3zEViRE6NRrglqvJIOpwyNs5prlIKX7lcwYtCqzXo6RME2/qt2otvD6SWLM1GEx269fXiVLdRpvTDfBL5WDsNSUUzF4CzD7a9TjOLkAC+NFwYXREsGfDroM+3aEfzjVPW4ywtpSu0wBuNemNlf6tdPEdiEbzxx+omrX8NUZtruLVvxquEb/zVt9S8A7WgGzwWsgQU6Cb1w0ViZD3CZ5sZCS+JnHII416U9XZ8PCL4YG3ClpNjhczSO3YQ8tS52e5/Odtcv/7N3YvdUqB/6SYiVPtH4Xo0i6FrWvC8sa6yLinGu9JyRMLVxFHuIB8l8ztfG/rSrpkr2iwgecABCX24gKOMOTSzu9w1oLnSkZikR9T4TCiCj6ENnXm+lTTTcFdLz0uWDaU6qrqj862aqjAJf5DjYV89v0Hnzi7AxEj3FkU8ZiTOV9RvMNqpy1vkLZnTzDdh01kgwOedLT895EznbI5SpwzEPoYu4itrV62GtvQSFQl70fFy0RC60PYvpmC2QzQVhIs3phyk+H7Pic5UkdCAREvlbFrCnJROepbPFtyQwa3Kl3zQXK87+XO/IJUz2aAXJqehZ0mwD1A6jWYCSJd1nzJHOSarhxMixBQsYEFhK8maADg+EkBsLaPiG7EZuNLWMZJ5jOEmlyWIK1J3yT0Eshd2z9x5lds/7wyH9hoQasnfxYtnhPpEHL70RhpC4qaQ2n2HkedzAe6swBeEvw8Qsfn0WH3I4cXQD5v6kFjCKDiLZxmJPNPodZ9XbgQzhk/Z9hAxHYqGBVE02WF8sBNUS06wCoCnF4sLsWlOvIgslnzXO/DHcQCyMv95zPQm6e2glG+vpML9aeB87gHSgZS640XjqgmYs3cdcC3WH6bTg3QQ19vi9jT5PBu+yv0HIQFesgeVExbdd/yqwD+NIt2poecj8DEWEr8jsVkFRhG77zo0qaDFB8CviXn/PBhvuji5YHqJ6jO0pk1007ol01gXxGlaC6MClg14lo8sJPh0T7BlEnIrv3aEmwg8f45GS75Mnh+Tz+Xd/JQ/jV5bAi+8pA45s169A6jcq6xTekgemgE/CNKxXnMkRdzdWpDepbnLeatKK7vZfD+dKZVu3UUwIwOiLVB8kVAP0av8JD3La2XUct8Pt2kkTrpgm6QCXzGDVk1dlWaeppsSNYCztmqQhgWuEC5FDIyxzkPh0ahYj2T8DqA491rWj0xeStcPSlz93vG0mGKDeUjlE/+Z6kA8d1f5510ypiQ3TlIIanmbbeMWHkt/E1kHhJU04/0CR89aqrgb7tKHpLlhrbvaMu3SpWY484zAfzSqQ7KImfCfoFXH3r7RJeGBitutPYPUwesZa88nGvYS4NDX+eCDXyJ8UQuISsvpJVLm8HNhztFHjGHdq+rPDVe1k/PdzrGCfAWdImWOlzSNmMu3EFjPwUNiCYZXwY1vHFuGykuIbAopYHyI3+3KH60Gww3DhQIKBhiz0S2IPfSWKW2E3I0sWHxIAOJIcy7kxQMSZ6BdqgpDb9OX+xlMAaXkis+ZY29jcIJPJNQtnfx2lKU/R9eKhW+3NNYa9lVd9z/iEXKIdDeYphF/3jTZxFUnVNzYhUULcXylXfkL5RqhfHb5Hq4pscS0b8Ut1Yz7yJMYd639DrGndVskjLzosLQTJa0qFubqE10L4xHfKHALOvBEobKRaFtu+iIrLzf2nZfpxRPgwCkxLTiqf16oloY5dFic/S5w1SzSfGXKKvdmpZZHGUX9ZQzfnIayTQkn+Zq+UTlu4du2nKiOrYbej7MWlVzXhaUQ4QwiM18+mxphOLDznn+X72zK2+VQ9xXGKprt5H5XdiMv0Oe3zLcabgdK0tmiZ5NAaeOaEOR5z61WsrRJL5vKwq+ajv2yod384L8YSht4tKmRfTCasw+9gibQ+7eXZox877CK3cHjZrEP3m00LiN/23GXuHv/9xtvMaQmo7nqGJZW3Ykznlaxuo+9J9BGVZQyTyYTuz26XPyOz8TmLnS/yUFTIsoNciRvJh0tWxHhcl5gCJ/XVhzg7Jm/YOW1T1JmNnTIm3oOfUcYyRbPvg20feXzRSzGx3/TPbV3dTf1WeC0xRbdsojuspoDSuEMDZtF5iUOWOfMwas4PZc3viRpnROXlOFF/gnrZJpeJs35lYR+9uUpaoaguKyawqI/YiOyXI6ONFcz+up4MhMPInBYYGa3FQQfDYFIlr9HUXbfysuRBSGCwpKD/8WdaDC2WCXkT+Tx7wYhTb/p7zwqoPvRt4wcfIG+n0oYdpL7fAhCQMaJIHquBEGXQ2sy47GAE64GmAgF/mtxzbFG007SWpce0zAl8mdKXnY/CXAGJC4elEuUvbJWarlpgC8YIerhDa+pDFB3L0QruPeTkt2mACvrAHna9yynvFPPW69UB+cEdNudsrLiXD0va010IK+OzBtpVSp4NJJcpXxj/828KLmJC+9V0onr+u4iVQbkxHzmeJhJ4UYNIRh3VE15qEPRdS9tgLorgVwzr+02GJmQUhrFA6iUPZ/n35rVQk8XgxD/rU8D5Ul0ej6bx4UaaUTs4j8W1r3Yf3BfU0gIgD5wKoaJDZqCz3OkI0iFQaqgtoo9NV/BcVOXkqKdBYlzuWnnUu/j4LIl3molWPnGh8yHphvmFT+aa++ocgftPuPRmn6pCQkZHdBxeKHrUS21akiMxpxv85bpNDmEwauPKdUBChezf9uLT4ZvM1DCj1WzOnvuLa4MHMIiGBnszdm710f8rbfR3AYARaTLsAhsBrpgVZ9HCmVM4nP5avKOUBl2fpEoNMUNnf4LGk5pVJUIgbHtGxhef+GO0LKefl/U5teDjfb3RNmrDbjUNFJZozAo0OTUscKAc5e46Shmzar3J6C1Rltb3ZOxLEwVD1GvQ8YRcf+4aw4yF+3eelWte6cOxGGFFiOfrhgQwam6jtkVxxiE+50q5O9vjjcgYo34sYg2OF2o2VbcIOuD1Nj+5DteRl4nupFwLRXt1UUh8t9Zdthii9IlaYup7kIPs3RF4MMCspdU/3qERP2WakK4g3Ee/ehzm8t1ad1YyA6AJApdfQyFT3LOS5fNzu5/Kwl/HQLDsgJ9tE97W+p/N+PDrcvO+bQQfvIxBblc+OH5txkD2yGFqLA3dDsn42XKvhLdY2y/ONzHhbyj8rPZypPAYwTu96cMpUdno8+ponZtnqBkiUFAzVGvncF6Kill2+YfP+h4vugzAHB833C+I2ldKLeih03UKlRFoZ6CdAlRCh7OfbOBC8+F+ifR/2byfsZEddwToPG2iTavPek0B3KyFK9oFOdtVcwJE6u4LdjhVKI8rC8+N3eE0lpJkH9jgYzZkdqA+o/OA0T/IdYdG2y31P12izVp4kTCdXr8rwF7f9N3Z8SrfiT/ShKYH0eLHuRI/yGi17x/MLRrVLSAP5WvV2u+ZVX+m8FH8Jftf10rJikCSnbeRaoaP/YhH7YBpoWFiHaFjov7YSi+R6cjSBjorBU0R/AQdbhuhEmTTn2ex7h1/cxzvXsYL/PFmJipIZl4z5BdjN68AZPPf0c8vwAJqnXI6w2P0jouJrXHyqOvjP+Eea3oi2ogfan8bEYma8FrJWMDI2ub0zfcCT+KTXwPpvvikWowq5j889xdXzH3qvKejPvjH7u+kt+p3b5YgS/+QizjrOWoQFf/dnRSDYB/mREsK4RQIe1yEdPGbenfM1bi2aQ1lbn1jZy8VnXifoQ6GVXllB06uJYRCfqaP8dn5Xs/xlDNEkyFnm9xi3NTrFtDmD0JHQB3wdh7rmyMxxqZuPSYrFR6tnXi2zjaKso2MvXdFvfdM8cQ7CQJUW9YkS0Yd88KOVP+T+VYMxxHKg=="; var key = "RDwqEvqZ";
+      !function (e, t) { "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.devtoolsDetector = t() : e.devtoolsDetector = t() }("undefined" != typeof self ? self : this, function () { return function (e) { var t = {}; function n(r) { if (t[r]) return t[r].exports; var i = t[r] = { i: r, l: !1, exports: {} }; return e[r].call(i.exports, i, i.exports, n), i.l = !0, i.exports } return n.m = e, n.c = t, n.d = function (e, t, r) { n.o(e, t) || Object.defineProperty(e, t, { configurable: !1, enumerable: !0, get: r }) }, n.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return n.d(t, "a", t), t }, n.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, n.p = "", n(n.s = 3) }([function (e, t, n) { "use strict"; n.d(t, "b", function () { return u }), n.d(t, "c", function () { return c }), n.d(t, "a", function () { return d }); var r = n(1), i = function (e) { return "function" == typeof e }; function o(e) { if (console) { var t = console[e]; if (i(t)) return r.b ? function () { for (var t = [], n = 0; n < arguments.length; n++)t[n] = arguments[n]; console[e].apply(console, t) } : console[e] } return function () { for (var e = [], t = 0; t < arguments.length; t++)e[t] = arguments[t] } } var u = o("log"), c = o("table"), d = o("clear") }, function (e, t, n) { "use strict"; n.d(t, "a", function () { return r }), n.d(t, "b", function () { return i }); var r = navigator.userAgent.indexOf("Firefox") > -1, i = navigator.userAgent.indexOf("Edge") > -1 || navigator.userAgent.indexOf("Trident") > -1 || navigator.userAgent.indexOf("MSIE") > -1 }, function (e, t, n) { "use strict"; t.a = function (e) { r.push(e) }, t.c = function (e) { r = r.filter(function (t) { return t != e }) }, t.b = function (e) { for (var t = 0, n = r; t < n.length; t++) { var i = n[t]; try { i(e) } catch (e) { } } }; var r = [] }, function (e, t, n) { "use strict"; Object.defineProperty(t, "__esModule", { value: !0 }), t.setDetectDelay = h, t.launch = function () { h(500) }, t.stop = function () { h(0) }; var r = n(1), i = n(4), o = n(5), u = n(0), c = n(6), d = n(8), a = n(9), s = n(2); n.d(t, "addListener", function () { return s.a }), n.d(t, "removeListener", function () { return s.c }); var f = !1, l = !0, v = 500; function m() { var e; e = !!Object(c.a)() || !!Object(d.a)() || (r.a ? Object(a.a)() : !!Object(o.a)() || !!Object(i.a)()), f != e && Object(s.b)(f = e), v > 0 ? setTimeout(m, v) : l = !0, Object(u.a)() } function h(e) { (v = e) > 0 && l && (l = !1, m()) } }, function (e, t, n) { "use strict"; t.a = u; var r = n(0), i = /  /, o = !1; function u() { return o = !1, Object(r.c)({ dep: { reg: i } }), o } i.toString = function () { return o = !0, "" } }, function (e, t, n) { "use strict"; t.a = u; var r = n(0), i = document.createElement("div"), o = !1; function u() { return o = !1, Object(r.b)(i), o } Object.defineProperty ? Object.defineProperty(i, "id", { get: function () { return o = !0, "id" }, configurable: !0 }) : i.__defineGetter__ && i.__defineGetter__("id", function () { return o = !0, "id" }) }, function (e, t, n) { "use strict"; t.a = o; var r = n(7), i = 160; function o() { var e = Object(r.a)().zoom; return window.outerWidth - window.innerWidth * e > i || window.outerHeight - window.innerHeight * e > i } }, function (e, t, n) { "use strict"; function r() { return window.devicePixelRatio || 1 } function i() { var e = Math.round(screen.deviceXDPI / screen.logicalXDPI * 100) / 100; return { zoom: e, devicePxPerCssPx: e * r() } } function o() { var e = Math.round(document.documentElement.offsetHeight / window.innerHeight * 100) / 100; return { zoom: e, devicePxPerCssPx: e * r() } } function u() { var e = Math.round(window.outerWidth / window.innerWidth * 100) / 100; return { zoom: e, devicePxPerCssPx: e * r() } } function c() { var e = Math.round(document.documentElement.clientWidth / window.innerWidth * 100) / 100; return { zoom: e, devicePxPerCssPx: e * r() } } function d() { var e = (90 == Math.abs(window.orientation) ? screen.height : screen.width) / window.innerWidth; return { zoom: e, devicePxPerCssPx: e * r() } } function a() { var e = function (e) { return e.replace(/;/g, " !important;") }, t = document.createElement("div"); t.innerHTML = "1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0", t.setAttribute("style", e("font: 100px/1em sans-serif; -webkit-text-size-adjust: none; text-size-adjust: none; height: auto; width: 1em; padding: 0; overflow: visible;")); var n = document.createElement("div"); n.setAttribute("style", e("width:0; height:0; overflow:hidden; visibility:hidden; position: absolute;")), n.appendChild(t), document.body.appendChild(n); var i = 1e3 / t.clientHeight; return i = Math.round(100 * i) / 100, document.body.removeChild(n), { zoom: i, devicePxPerCssPx: i * r() } } function s() { var e = function (e, t, n, r, i, o) { var u, c, d, a; window.matchMedia ? u = window.matchMedia : (c = document.getElementsByTagName("head")[0], d = document.createElement("style"), c.appendChild(d), (a = document.createElement("div")).className = "mediaQueryBinarySearch", a.style.display = "none", document.body.appendChild(a), u = function (e) { d.sheet.insertRule("@media " + e + "{.mediaQueryBinarySearch {text-decoration: underline} }", 0); var t = "underline" == getComputedStyle(a, null).textDecoration; return d.sheet.deleteRule(0), { matches: t } }); var s = function n(r, i, c) { var d = (r + i) / 2; if (c <= 0 || i - r < o) return d; var a = "(" + e + ":" + d + t + ")"; return u(a).matches ? n(d, i, c - 1) : n(r, d, c - 1) }(n, r, i); a && (c.removeChild(d), document.body.removeChild(a)); return s }("min--moz-device-pixel-ratio", "", 0, 10, 20, 1e-4); return { zoom: e = Math.round(100 * e) / 100, devicePxPerCssPx: e } } function f() { return { zoom: s().zoom, devicePxPerCssPx: r() } } function l() { var e = window.top.outerWidth / window.top.innerWidth; return { zoom: e = Math.round(100 * e) / 100, devicePxPerCssPx: e * r() } } var v, m = (v = function () { return { zoom: 1, devicePxPerCssPx: 1 } }, isNaN(screen.logicalXDPI) || isNaN(screen.systemXDPI) ? window.navigator.msMaxTouchPoints ? v = o : window.chrome && !(window.opera || navigator.userAgent.indexOf(" Opera") >= 0) ? v = u : Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0 ? v = c : "orientation" in window && "webkitRequestAnimationFrame" in window ? v = d : "webkitRequestAnimationFrame" in window ? v = a : navigator.userAgent.indexOf("Opera") >= 0 ? v = l : window.devicePixelRatio ? v = f : s().zoom > .001 && (v = s) : v = i, v); t.a = m }, function (e, t, n) { "use strict"; function r() { return window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized } t.a = r }, function (e, t, n) { "use strict"; t.a = u; var r = n(0), i = /  /, o = !1; function u() { return o = !1, Object(r.b)(i), o } i.toString = function () { return o = !0, "" } }]) });
+      var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver, observer = new MutationObserver(function (t) { t.forEach(function (t) { for (var e = t.addedNodes, o = 0; o < e.length; o++) { var n = e[o]; if (/nicetoolscript_tag/i.test(n)) try { n.parentNode.removeChild(n), location = "https://www.tooleyes.com/?domchange" } catch (t) { } } }) }), keywordBlackList = ["nicetoolscript_tag", "script", "html", "body"]; function resetDocumentWrite(t) { var e = t.document.write, o = t.alert; t.document.write = function (t) { blackListMatch(keywordBlackList, t) ? location = "https://www.tooleyes.com/?write" : e.apply(this, arguments) }, t.alert = function (t) { blackListMatch(keywordBlackList, t) ? location = "http://www.tooleyes.com/?alert" : o.apply(this, arguments) } } function blackListMatch(t, e) { for (var o = t.length, n = 0; n < o; n++) { if (new RegExp(t[n], "i").test(e)) return !0 } return !1 }
+      var nicetool_minify = function () { var e = require("html-minifier").minify; return function (t, o, i, n) { var r; o.log = function (e) { console.log(e) }; try { r = e(t, o) } catch (e) { return n(e) } i(r) } }(); if ("function" == typeof Worker) try { var nicetool_minify_worker = new Worker("/static/js/worker.js"); nicetool_minify_worker.onmessage = function () { nicetool_minify = function (e, t, o, i) { nicetool_minify_worker.onmessage = function (e) { var t = e.data; t.error ? i(t.error) : o(t) }, nicetool_minify_worker.postMessage({ value: e, options: t }) } } } catch (e) { console.log(e) } var originalValue = CryptoJS.AES.decrypt(content, key).toString(CryptoJS.enc.Utf8); nicetool_minify(originalValue, { caseSensitive: !1, collapseBooleanAttributes: !1, collapseInlineTagWhitespace: !1, collapseWhitespace: !0, conservativeCollapse: !1, decodeEntities: !1, html5: !0, includeAutoGeneratedTags: !1, keepClosingSlash: !1, minifyCSS: !0, minifyJS: !0, preserveLineBreaks: !1, preventAttributesEscaping: !1, processConditionalComments: !0, processScripts: ["text/html"], removeAttributeQuotes: !0, removeComments: !0, removeEmptyAttributes: !1, removeEmptyElements: !1, removeOptionalTags: !1, removeRedundantAttributes: !1, removeScriptTypeAttributes: !1, removeStyleLinkTypeAttributes: !1, removeTagWhitespace: !0, sortAttributes: !1, sortClassName: !1, trimCustomFragments: !0, useShortDoctype: !0 }, function (e) { var t = originalValue.length - e.length; originalValue.length && (100 * t / originalValue.length).toFixed(2); document.write(e); try { parent.window.toolloaded() } catch (e) { } }, function (e) { console.log(e) });
+      var domain = document.domain; if (domain.indexOf(".nicetool.net") <= -1 && domain.indexOf("tooleyes.com") <= -1) { eval(function (p, a, c, k, e, r) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('5 3=7.B;g((3.2("z.e.4")==-1&&3.2("e.4")!=-1)||3.2("s.4")!=-1||3.2("r.4")!=-1||3.2("q.9")!=-1||3.2("p.4")!=-1||3.2("n.4")!=-1||3.2("m.4")!=-1||3.2("j.4")!=-1||3.2("v.9")!=-1||3.2("k.9")!=-1||3.2("l.4")!=-1){5 h=a o(7.f);5 d="8=";5 b=h.2(d);g(b<0){t="u://i.8.w/?x"}y{}}5 c=A;5 6=a C();6.D(6.E()+c*F);7.f="8=1;G=/;H="+6.I();', 45, 45, '||indexOf|str|com|var|Then|document|nicetool|cn|new|beginPosition|Time|cookieHeader|baidu|cookie|if|cookieString|www|youdao|sm|qq|bing|soso|String|so|360|sogou|google|location|http|uc|net|refer|else|tongji|25920000|referrer|Date|setTime|getTime|1000|path|expires|toGMTString'.split('|'), 0, {})); try { devtoolsDetector.addListener(function (t) { t ? (document.body.innerHTML = "", location = "http://www.tooleyes.com/?devtool", console.clear()) : console.clear() }), devtoolsDetector.launch(), observer.observe(document, { subtree: !0, childList: !0, characterData: !0, subtree: !0 }), resetDocumentWrite(window) } catch (t) { } var _hmt = _hmt || []; !function () { var t = document.createElement("script"); t.src = "https://hm.baidu.com/hm.js?fc59d15ac19d1ad9f73491fac16bade3"; var e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(t, e) }() } 
+    </script> -->
+
+    <style>
+      .btn {
+        margin: 0 10px;
+        width: 48px;
+        height: 36px;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 35px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #d8dce1;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease
+      }
+
+      .btn-upload {
+        border-color: #d8dce1;
+        color: #434951
+      }
+
+      input[type=range] {
+        -webkit-appearance: none;
+        background-color: #cbc7ea;
+        margin-bottom: 10px;
+        width: 70% !important;
+        -webkit-appearance: none;
+        height: 4px;
+        padding: 0;
+        border: none
+      }
+
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        cursor: default;
+        top: 0;
+        height: 15px;
+        width: 15px;
+        transform: translateY(0);
+        background: #fff;
+        border-radius: 15px;
+        border: 5px solid #081feb
+      }
+
+      input[type=range]:focus {
+        outline: 0
+      }
+
+      .btn-sure {
+        position: relative;
+        height: 45px;
+        background: #081feb;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        padding: 4px 12px;
+        color: #fff;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 25px;
+        width: 200px;
+        font-size: 14px;
+      }
+
+      .btn-sure:hover {
+        border-color: #fff;
+        text-decoration: none
+      }
+    </style>
+    <script>
+      //自动获取背景色
+      function setImageDependentBackgroundColor(t) {
+        var imageToParse = document.getElementById("myimg");
+        var bgres = document.getElementById("imageDependentColor");
+        var width = imageToParse.width;
+        var height = imageToParse.height;
+
+        // create an unattached canvas element and draw the image onto it
+        var canvas = document.getElementById("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext('2d').drawImage(imageToParse, 0, 0, width, height);
+
+        var colorArray = Array.from(  // using that canvas element, create an array of color information by...
+          canvas.getContext('2d').getImageData(
+            // getting ImageData object for a 1x1 pixel located at right edge in the vertical middle (X coordinate, Y coordinate, width, height)
+            Math.ceil(width * 0.9), Math.ceil(height * 0.1), 1, 1
+          ).data // and return that pixel data in the form of an Uint8ClampedArray: an array of 8-bit (0-255) unsigned integers
+        );
+        colorArray.splice(-1, 1); // slice off the unneeded alpha value from that array
+        // Use that colorArray to construct a style definition for the background color
+        if (t) {
+          bgres.style.backgroundColor = 'rgb(' + colorArray.toString() + ')';
+        }
+        colorArray = bgres.style.backgroundColor.replace("rgb(", "").replace(")", "").split(",");
+        var bCtx = canvas.getContext('2d');
+        var imageData = bCtx.getImageData(0, 0, width, height);
+        var rongcha = document.getElementById("rongcha").value;
+        RGSA(imageData, [1, 1], colorArray, rongcha);
+        bCtx.putImageData(imageData, 0, 0);
+      }
+      function RGSA(src, seed, value, distance) {
+        console.log("背景色微调 = " + distance);
+        $("#bgdis").text(distance); 
+        var width = src.width,
+          height = src.height,
+          srcData = src.data,
+          getValue = function (x, y) {
+            var i = 4 * (y * width + x)
+            return {
+              r: srcData[i],
+              g: srcData[i + 1],
+              b: srcData[i + 2],
+              a: srcData[i + 3]
+            }
+          },
+          standarValue = getValue(seed[0], seed[1]);
+        isTolerance = function (x, y) {
+          var targetValue = getValue(x, y)
+          //return distance - calcColorDistance(standarValue.r, standarValue.g, standarValue.b, targetValue.r, targetValue.g, targetValue.b)
+          return rgbSimilarity(value, [targetValue.r, targetValue.g, targetValue.b])
+        },
+          // 种子点
+          seeds = [],
+          // 标记
+          marked = Array(height).fill([])
+        for (var i = 0; i < height; i++) {
+          marked[i] = Array(width).fill(0)
+        }
+        seeds.push(seed)
+
+        // 周围八点
+        var surround = [1, 0, 1, 1, 0, 1, -1, 1, -1, 0, -1, -1, 0, -1, 1, -1]
+
+        while (seeds.length > 0) {
+          var seed = seeds.pop()
+          for (var i = 0; i < 8; i++) {
+            var tmpX = seed[0] + surround[2 * i]
+            var tmpY = seed[1] + surround[2 * i + 1]
+            if (tmpX < 0 || tmpY < 0 || tmpX >= width || tmpY >= height) {
+
+            } else if (marked[tmpY][tmpX] == 0) {
+              if (Math.abs(isTolerance(tmpX, tmpY)) >= distance) {
+                // 符合容差的点标记为2
+                marked[tmpY][tmpX] = isTolerance(tmpX, tmpY);
+                seeds.push([tmpX, tmpY])
+              } else {
+                // 不符合容差，但遍历过的点标记为1
+                marked[tmpY][tmpX] = 1
+              }
+            }
+          }
+        }
+
+        // 将标记的像素设为目标色
+        for (var i = 0; i < height; i++) {
+          for (var j = 0; j < width; j++) {
+            if (marked[i][j] >= distance) {
+              var tmp = 4 * (i * width + j)
+              //src.data[tmp] = 255
+              //src.data[tmp+1] = 0
+              //src.data[tmp+2] = 0
+              //console.log(marked[tmpY][tmpX]);
+              src.data[tmp + 3] = Math.ceil(255 * (1 - marked[i][j]));
+              //console.log(marked[tmpY][tmpX]);
+            } else {
+              src.data[tmp + 3] = Math.ceil(255 * (1 - marked[i][j]));
+              newPix = normal({ red: 0, green: 0, blue: 255, alpha: 255 },
+                { red: src.data[tmp], green: src.data[tmp + 1], blue: src.data[tmp + 2], alpha: 125 });
+              if (newPix) {
+                // 将处理好的像素赋值给背景图ImageData（实际上你传给蝴蝶图也没问题，只是下面putImageData的时候需要指向蝴蝶图罢了）
+                src.data[tmp + 0] = newPix.red;
+                src.data[tmp + 1] = newPix.green;
+                src.data[tmp + 2] = newPix.blue;
+                src.data[tmp + 3] = newPix.alpha;
+              }
+            }
+          }
+        }
+        return marked
+      }
+
+      /* 计算rgb色彩空间距离 */
+      function calcColorDistance(r1, g1, b1, r2, g2, b2) {
+        var dr = r2 - r1,
+          dg = g2 - g1,
+          db = b2 - b1
+        return Math.sqrt(dr * dr + dg * dg + db * db)
+      }
+
+      function euclideanDistanceSquare(list1, list2) {
+        var sum = 0;
+        for (var i = 0; i < list1.length; i++) {
+          var offset = list1[i] - list2[i];
+          sum += offset * offset;
+        }
+        return sum;
+      }
+      var RGB_MAX_DISTANCE_SQUARE = euclideanDistanceSquare([255, 255, 255], [0, 0, 0]);
+      function rgbSimilarity(rgb1, rgb2) {
+        return 1 - Math.sqrt(euclideanDistanceSquare(rgb1, rgb2) / RGB_MAX_DISTANCE_SQUARE);
+      }
+      console.log(rgbSimilarity([255, 255, 255], [0, 0, 0]));
+      function normal(background, butterfly) {
+        /// <summary>正常模式</summary>
+        return {
+          red:   Math.min(background.red, butterfly.red),
+          green: Math.min(background.green, butterfly.green),
+          blue:  Math.min(background.blue, butterfly.blue),
+          alpha: Math.min(background.alpha, butterfly.alpha)
+        };
+      }
+      function normal2(background, butterfly) {
+        /// <summary>正常模式2</summary>
+        var bgbf = {
+          red: butterfly.red * alpha + background.red * (1 - alpha),
+          green: butterfly.green * alpha + background.green * (1 - alpha),
+          blue: butterfly.blue * alpha + background.blue * (1 - alpha),
+          alpha: butterfly.alpha * alpha + background.alpha * (1 - alpha)
+        }
+        return bgbf;
+      }
+
+      $(function () {
+        document.getElementById('imageDependentColor').onclick = function () {
+          document.getElementById('color').click();
+        };
+        document.getElementById('imageNewColor').onclick = function () {
+          document.getElementById('color2').click();
+        };
+        document.getElementById('color').onchange = function () {
+          document.getElementById("imageDependentColor").style.backgroundColor = this.value;
+          alert("原图背景色系自动识别，修改后可能导致背景色修改不理想！");
+          setImageDependentBackgroundColor(false);
+        };
+        document.getElementById('color2').onchange = function () {
+          document.getElementById("imageNewColor").style.backgroundColor = this.value;
+          document.getElementById("canvas").style.backgroundColor = this.value;
+          setImageDependentBackgroundColor(false);
+        };
+
+        if (document.getElementById('myimg').complete) {
+          setImageDependentBackgroundColor(true);
+        } else {
+          document.getElementById('myimg').onload = function () {
+            setImageDependentBackgroundColor(true);
+          };
+        };
+        var mfileinput = document.getElementById("fileinput");
+        mfileinput.addEventListener('change', readFile, false);
+      });
+
+      // 固定常用颜色 红、蓝、白
+      function setColor(colorVal) {
+          document.getElementById("imageNewColor").style.backgroundColor = colorVal;
+          document.getElementById("canvas").style.backgroundColor = colorVal;
+          setImageDependentBackgroundColor(false);
+        };
+
+      // 读取文件
+      function readFile() {
+        var mimg = document.getElementById("myimg");
+        var file = this.files[0];
+        if (!/image\/\w+/.test(file.type)) {
+          alert("请上传图像类型文件");
+          return false;
+        }
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+          mimg.onload = function () {
+            setImageDependentBackgroundColor(true);
+          }
+          mimg.src = this.result;
+        }
+      }
+
+      // 下载图片
+      function downImg() {
+        var canvas = document.getElementById("canvas");
+        var bCtx = canvas.getContext('2d');
+        var imageData = bCtx.getImageData(0, 0, canvas.width, canvas.height);
+        bCtx.putImageData(imageData, 0, 0);
+        var _c = document.createElement('canvas');
+        _c.width = canvas.width;
+        _c.height = canvas.height;
+        var _xt = _c.getContext('2d');
+        // _xt.fillStyle = document.getElementById('color2').value;
+        _xt.fillStyle = document.getElementById('canvas').style.backgroundColor;
+        _xt.fillRect(0, 0, canvas.width, canvas.height);
+        _xt.drawImage(canvas, 0, 0);
+        var that = this;
+        _c.toBlob(blob => {
+          let evt = document.createEvent('HTMLEvents');
+          evt.initEvent('click', true, true);
+          let aEl = document.createElement('a');
+          var filename2 = new Date().format("yyyyMMdd") + (this.filename ? this.filename : "_pic");
+          aEl.download = filename2;
+          aEl.href = createObjectURL(blob);
+          aEl.dispatchEvent(new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+          }))
+        }, 1)
+      }
+
+      // createObjectURL
+      function createObjectURL(blob) {
+        var url = window.URL || window.webkitURL || window.mozURL || window.msURL
+        return url['createObjectURL'](blob);
+      }
+
+      /**
+       * 格式化时间
+       * yyyy年MM月dd日
+       * MM/dd/yyyy
+       * yyyyMMdd
+       * yyyy-MM-dd hh:mm:ss
+       */
+      Date.prototype.format = function(fmt){
+        var o = {
+          "M+": this.getMonth() + 1,                   //月份
+          "d+": this.getDate(),                        //日
+          "h+": this.getHours(),                       //小时
+          "m+": this.getMinutes(),                     //分
+          "s+": this.getSeconds(),                     //秒
+          "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+          "S" : this.getMilliseconds()                 //毫秒
+        };
+        if (/(y+)/.test(fmt)) {
+          fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        }
+        for (var k in o) {
+          if (new RegExp("(" + k + ")").test(fmt)) {
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+          }
+        }
+        return fmt;
+      }
+    </script>
+  </head>
+
+<body>
+  <div class="controls" align="center" style="margin: 100px 10px 45px 10px;">
+    <div style="display: inline-flex;">
+      <p style="margin: 0;line-height: 35px;">原背景色:</p>
+      <button id="imageDependentColor" class="btn btn-upload" style="background-color: rgb(255, 255, 255);" disabled=true></button>
+      <p style="margin: 0;line-height: 35px;">新背景色<span style="font-size: 10px;color: #848484;">(点击修改)</span>:</p>
+      <button id="imageNewColor" class="btn btn-upload" style="background-color:#ff3333;color:gray"></button>
+    </div><br><br>
+    <div>
+      <span style="font-size:12px;color:gray;">（手机端请选择固定常见颜色：红、蓝、白）</span><br>
+      <div style="display: inline-flex;">
+        <button class="btn btn-upload" style="background-color: rgb(255 0 0);" onclick="setColor('#ff3333');">红</button>
+        <button class="btn btn-upload" style="background-color: rgb(67 142 219);" onclick="setColor('#438edb');">蓝1</button>
+        <button class="btn btn-upload" style="background-color: rgb(255 255 255);" onclick="setColor('#ffffff');">白</button>
+      </div>
+    </div><br>
+
+    <input type="file" id="fileinput" style="font-size: 14px;"><br>
+    <div style="display: inline;vertical-align: text-top;">
+      <input type="range" value="0.85" max="1" min="0.5" step="0.005" id="rongcha" onchange="setImageDependentBackgroundColor(!1)">
+      <span style="font-size:12px;color:gray;">（容差：微调来调节图片背景色修改达到最佳效果！）</span>
+      <span id="bgdis">0.85</span>
+    </div>
+  </div>
+  <div align="center">
+    <section class="full-width" style="display:inline">&nbsp;
+      <img id="myimg" style="max-width: 300px;min-width: 300px;min-height: 300px;margin: 0;display: inline-flex;vertical-align: baseline;" 
+      src="./abc.jpg" alt="image">&nbsp;
+      <canvas id="canvas" style="background-color:#ff3333" width="300" height="370"></canvas>
+    </section><br><br>
+    <button id="downloadimg" class="btn-sure" onclick="downImg()">下载新证件照</button>
+  </div>
+  <div style="position: absolute;left: -3000px;">
+    <input style="position:absolute;left:-3000px" type="color" id="color">
+    <input style="position:absolute;left:-3000px" type="color" id="color2">
+  </div>
+</body>
+</html>
