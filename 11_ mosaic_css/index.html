@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="never">
+  <title>马赛克</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #333;
+      padding: 20px;
+    }
+
+    /* ##################################### */
+    /* ##################################### */
+    /* ##################################### */
+    .input-wrap {
+      border-radius: 2px;
+      height: 40px;
+      overflow: hidden;
+      position: relative;
+      width: 200px;
+      z-index: 0;
+    }
+
+    .input-wrap .input-bg {
+      height: 40px;
+      padding: 0;
+      perspective: 500px;
+      position: absolute;
+      width: 200px;
+    }
+
+    .input-wrap .input-bg .column {
+      float: right;
+      height: 40px;
+      width: 4px;
+    }
+
+    .input-wrap .input-bg .tile {
+      background: #333;
+      float: right;
+      width: 4px;
+      height: 4px;
+      transform: rotateY(0deg);
+      transform-style: preserve-3d;
+      transition: all .3s ease-in-out;
+      z-index: -1;
+    }
+
+    .input-wrap .input-bg .tile.flipped {
+      background: rgb(146, 45, 45);
+      pointer-events: none;
+      transform: rotateY(180deg);
+    }
+
+    .input-wrap input:focus {
+      outline: none;
+    }
+
+    .input-wrap .btn_1 {
+      background: transparent;
+      border: none;
+      border-radius: 2px 0 0 2px;
+      height: 40px;
+      padding: 0;
+      position: absolute;
+      width: 0;
+      z-index: 0;
+    }
+
+    .input-wrap .btn_1 {
+      background: #333;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      /* position: absolute; */
+      /* right: 0; */
+      transition: border-radius .2s ease-in-out;
+      width: 200px;
+    }
+
+    .input-wrap.open .btn_1 {
+      border-radius: 0 2px 2px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="input-wrap">
+    <div class="input-bg"></div>
+    <input class="btn_1" type="button" value="BUTTON" />
+  </div>
+
+  <script type="text/javascript"> 
+    $(document).ready(function () {
+
+      // ######################################################
+      // ######################################################
+      // ######################################################
+
+      var $wrapper = $('div.input-wrap'),
+        horizontalCnt = $('div.input-bg').outerWidth() / 4,
+        verticalCnt = $('div.input-bg').outerHeight() / 4,
+        boxCnt = horizontalCnt * verticalCnt,
+        $toggled = [],
+        x = 0;
+        console.log(horizontalCnt, verticalCnt, boxCnt)
+      // create all tiles
+      $('div.input-bg').prepend('<div class="column column-1"></div>');
+      for (i = 0; i <= boxCnt; i++) {
+        if ((i % 10) == 0) {
+          x++;
+          $('div.input-bg').append('<div class="column column-' + x + '"></div>');
+        };
+        $('div.column.column-' + x).append('<div class="tile tile-' + i + '"></div>');
+        var randomPos = Math.random() * 100;
+        if (randomPos % 2 == 0) {
+          randomPos = 0;
+        }
+        $toggled.splice(randomPos, 0, i);
+      }
+      console.log(x, $toggled)
+      $toggled.filter(Number);
+      console.log($toggled)
+
+      function flipBox(pos) {
+        var $box = $('div.tile.tile-' + $toggled[pos]);
+        setTimeout(function () {
+          $box.addClass("flipped");
+        }, $toggled.indexOf(pos) * 1);
+      };
+
+      function unflipBox(pos) {
+        var $box = $('div.tile.tile-' + $toggled[pos]);
+        setTimeout(function () {
+          $box.removeClass("flipped");
+        }, ($toggled.length - $toggled.indexOf(pos)) * 1);
+      };
+
+      // ##################################
+      $('.btn_1').hover(function() {
+        $( this ).css({"color": "#fff","background": "#3330"});
+        $( this ).find( "span" ).last().remove();
+        // ###
+        if ($wrapper.hasClass("open")) {
+        } else {
+          $wrapper.toggleClass("open");
+          for (i = 1; i <= $toggled.length; i++) {
+            flipBox(i - 1);
+          }
+        }
+      }, function() {
+        $( this ).css({"color": "#ddd","background": "transparent"})
+        $( this ).append( $( "<span> ***</span>" ));
+        // ###
+        $wrapper.toggleClass("open");
+        setTimeout(function () {
+          for (i = $toggled.length; i > 0; i--) {
+            unflipBox(i - 1);
+          }
+        });
+      });
+
+      // ##################################
+      $('.btn_2').hover(function() {
+        $( this ).css({"color": "#fff","background": "#3330"});
+        $( this ).find( "span" ).last().remove();
+        // ###
+        if ($wrapper.hasClass("open")) {
+        } else {
+          $wrapper.toggleClass("open");
+          for (i = 1; i <= $toggled.length; i++) {
+            flipBox(i - 1);
+          }
+        }
+      }, function() {
+        $( this ).css({"color": "#ddd","background": "transparent"})
+        $( this ).append( $( "<span> ***</span>" ));
+        // ###
+        $wrapper.toggleClass("open");
+        setTimeout(function () {
+          for (i = $toggled.length; i > 0; i--) {
+            unflipBox(i - 1);
+          }
+        });
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>
+
+
+<!-- 
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+  * {
+    box-sizing: border-box;
+}
+body {
+    background: #333;
+    padding: 20px;
+}
+.input-wrap {
+    /*   background: #fff; */
+    
+    border-radius: 2px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    z-index: 0;
+}
+.input-wrap .input-bg {
+    height: 40px;
+    padding: 0;
+    perspective: 500px;
+    position: absolute;
+    width: 260px;
+}
+.input-wrap .input-bg .column {
+    float: right;
+    height: 40px;
+    width: 4px;
+}
+.input-wrap .input-bg .tile {
+    background: #333;
+    float: right;
+    height: 4px;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: all .1s ease-in-out;
+    width: 4px;
+    z-index: -1;
+}
+.input-wrap .input-bg .tile.flipped {
+    background: #fff;
+    pointer-events: none;
+    transform: rotateY(180deg);
+}
+.input-wrap input:focus,
+.input-wrap button:focus {
+    outline: none;
+}
+.input-wrap input {
+    background: transparent;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    height: 40px;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    width: 0;
+    z-index: 0;
+}
+.input-wrap input:focus {
+    opacity: 1;
+    padding: 6px 10px;
+    transition: opacity 1s ease;
+    width: 260px;
+}
+.input-wrap .btn-search {
+    background: #09f;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    transition: border-radius .2s ease-in-out;
+    width: 40px;
+}
+.input-wrap.open .btn-search {
+    border-radius: 0 2px 2px 0;
+}
+</style>
+  <body>
+    
+    <div class="input-wrap">
+      <div class="input-bg"></div>
+      <input type="text" placeholder="search">
+      <button type="submit" class="btn btn-search fa fa-search"></button>
+  </div>
+
+    <script>
+      $(document).ready(function() {
+    var $wrapper = $('div.input-wrap'),
+        horizontalCnt = $('div.input-bg').outerWidth() / 4,
+        verticalCnt = $('div.input-bg').outerHeight() / 4,
+        boxCnt = horizontalCnt * verticalCnt,
+        $toggled = [],
+        x = 0;
+
+    // create all tiles
+    $('div.input-bg').prepend('<div class="column column-1"></div>');
+    for (i = 0; i <= boxCnt; i++) {
+        if ((i % 10) == 0) {
+            x++;
+            $('div.input-bg').append('<div class="column column-' + x + '"></div>');
+        };
+        $('div.column.column-' + x).append('<div class="tile tile-' + i + '"></div>');
+        var randomPos = Math.random() * 100;
+        if (randomPos % 2 == 0) {
+            randomPos = 0;
+        }
+        $toggled.splice(randomPos, 0, i);
+    }
+    $toggled.filter(Number);
+
+    // flip tiles at random
+    $('body')
+        .on('click', 'button.btn-search', function() {
+            if ($wrapper.hasClass("open")) {
+                // submit the form
+            } else {
+                $wrapper.toggleClass("open");
+                for (i = 1; i <= $toggled.length; i++) {
+                    flipBox(i - 1);
+                }
+                setTimeout(function() {
+                    $('input').focus();
+                }, 700);
+            }
+        })
+        .on('blur', 'input', function() {
+            $wrapper.toggleClass("open");
+            setTimeout(function() {
+                for (i = $toggled.length; i > 0; i--) {
+                    unflipBox(i - 1);
+                }
+            });
+        });
+
+    function flipBox(pos) {
+        var $box = $('div.tile.tile-' + $toggled[pos]);
+        setTimeout(function() {
+            $box.addClass("flipped");
+        }, $toggled.indexOf(pos) * 1);
+    };
+
+    function unflipBox(pos) {
+        var $box = $('div.tile.tile-' + $toggled[pos]);
+        setTimeout(function() {
+            $box.removeClass("flipped");
+        }, ($toggled.length - $toggled.indexOf(pos)) * 1);
+    };
+
+});
+    </script>
+  </body>
+</html> -->
