@@ -1,17 +1,8 @@
 # web-code
 
+收集自开源网络，欢迎提交分享 🎉
+
 ## web小功能记录
-
-
-```
-echo "# web-code" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/cl9000/web-code.git
-git push -u origin master
-```
-
 
 #### 【更新日志】
 
@@ -30,19 +21,19 @@ git push -u origin master
 | 11 | 11_mosaic_css | 悬停马赛克 |
 | 12 | web-library | 其它web-lib |
 
-收集自开源网络，欢迎提交分享 🎉
 
-* [登录页](01_login)
-* [FullPage](02_simple_full_pages)
-* [简单欢迎页](03_welcome_like)
-* [简单旋转测试](04_css_xuanzhuan)
-* [更换证件照提示](05_cardId_photo)
-* [跟随鼠标拖尾](06_鼠标canvas特效)
-* [pc日历](07_pc_calendar)
-* [文件拖拽上传](08_uploadfile)
-* [09_时钟_灯笼_动字?粒钟/进度](09_时钟_灯笼_动字?粒钟/进度)
-* [Loading](10_loading)
-* [悬停马赛克](11_mosaic_css)
+
+* [登录页](01_login) <a style="color: orange" href="http://cl9000.gitee.io/web-code/01_login/">[预览]</a>
+* [FullPage](02_simple_full_pages) <a style="color: orange" href="http://cl9000.gitee.io/web-code/02_simple_full_pages/">[预览]</a>
+* [简单欢迎页](03_welcome_like) <a style="color: orange" href="http://cl9000.gitee.io/web-code/03_welcome_like/">[预览]</a>
+* [简单旋转测试](04_css_xuanzhuan) <a style="color: orange" href="http://cl9000.gitee.io/web-code/04_css_xuanzhuan/">[预览]</a>
+* [更换证件照提示](05_cardId_photo) <a style="color: orange" href="http://cl9000.gitee.io/web-code/05_cardId_photo/">[预览]</a>
+* [跟随鼠标拖尾](06_鼠标canvas特效) <a style="color: orange" href="http://cl9000.gitee.io/web-code/06_鼠标canvas特效/">[预览]</a>
+* [pc日历](07_pc_calendar) <a style="color: orange" href="http://cl9000.gitee.io/web-code/07_pc_calendar/">[预览]</a>
+* [文件拖拽上传](08_uploadfile) <a style="color: orange" href="http://cl9000.gitee.io/web-code/08_uploadfile/">[预览]</a>
+* [09_时钟_灯笼_动字?粒钟/进度](09_时钟_灯笼_动字?粒钟/进度) <a style="color: orange" href="http://cl9000.gitee.io/web-code/web-library/3DGridEffect/">[预览]</a>
+* [Loading](10_loading) <a style="color: orange" href="http://cl9000.gitee.io/web-code/10_loading/">[预览]</a>
+* [悬停马赛克](11_mosaic_css) <a style="color: orange" href="http://cl9000.gitee.io/web-code/11_mosaic_css/">[预览]</a>
 
 #### web-library
 * [3D网格效果](web-library/3DGridEffect) <a style="color: orange" href="http://cl9000.gitee.io/web-code/web-library/3DGridEffect/">[预览]</a>
@@ -77,6 +68,15 @@ git push -u origin master
 * [摇摆弹性效果幻灯片](web-library/WobblySlideshowEffect) <a style="color: orange" href="http://cl9000.gitee.io/web-code/web-library/WobblySlideshowEffect/">[预览]</a>
 
 
+## 其它
+```
+echo "# web-code" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/cl9000/web-code.git
+git push -u origin master
+```
 
 
 
