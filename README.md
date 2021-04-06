@@ -23,7 +23,7 @@
 
 
 
-* [登录页](01_login) <div style="color: red;"><a href="http://cl9000.gitee.io/web-code/01_login/"> ## => 【预览】</a></div>
+* [登录页](01_login) <a style="color: red" href="http://cl9000.gitee.io/web-code/01_login/"> ## => 【预览】</a>
 * [FullPage](02_simple_full_pages) <a style="color: red" href="http://cl9000.gitee.io/web-code/02_simple_full_pages/"> ## => 【预览】</a>
 * [简单欢迎页](03_welcome_like) <a style="color: red" href="http://cl9000.gitee.io/web-code/03_welcome_like/"> ## => 【预览】</a>
 * [简单旋转测试](04_css_xuanzhuan) <a style="color: red" href="http://cl9000.gitee.io/web-code/04_css_xuanzhuan/"> ## => 【预览】</a>
