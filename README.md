@@ -67,6 +67,7 @@
 * [垂直固定导航(侧栏)](web-library/vertical-fixed-navigation) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/vertical-fixed-navigation/"> ## => 【预览】</a>
 * [摇摆弹性效果幻灯片](web-library/WobblySlideshowEffect) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/WobblySlideshowEffect/"> ## => 【预览】</a>
 * [Bespoke.js–基于浏览器的演示文稿微框架] <a style="color: red" href="http://markdalgleish.com/projects/bespoke.js/"> ## => 【预览】</a>
+* [Pressure.js – 用于处理Force Touch，3D Touch的JavaScript库] <a style="color: red" href="https://pressurejs.com/"> ## => 【预览】</a>
 
 
 
