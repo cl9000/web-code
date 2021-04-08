@@ -19,6 +19,7 @@
 | 09 | 09_时钟_灯笼_动字?粒钟/进度 | ... |
 | 10 | 10_loading | loading |
 | 11 | 11_mosaic_css | 悬停马赛克 |
+| 12 | 12_404-CSS | 404-CSS |
 | 12 | web-library | 其它web-lib |
 
 
@@ -34,6 +35,7 @@
 * [09_时钟_灯笼_动字?粒钟/进度](09_时钟_灯笼_动字?粒钟/进度) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/3DGridEffect/"> ## => 【预览】</a>
 * [Loading](10_loading) <a style="color: red" href="http://cl9000.gitee.io/web-code/10_loading/"> ## => 【预览】</a>
 * [悬停马赛克](11_mosaic_css) <a style="color: red" href="http://cl9000.gitee.io/web-code/11_mosaic_css/"> ## => 【预览】</a>
+* [404-CSS](12_404-CSS) <a style="color: red" href="http://cl9000.gitee.io/web-code/12_404-CSS/"> ## => 【预览】</a>
 
 #### web-library
 * [3D网格效果](web-library/3DGridEffect) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/3DGridEffect/"> ## => 【预览】</a>
