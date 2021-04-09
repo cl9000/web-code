@@ -37,6 +37,7 @@
 * [悬停马赛克](11_mosaic_css) <a style="color: red" href="http://cl9000.gitee.io/web-code/11_mosaic_css/"> ## => 【预览】</a>
 * [404-CSS](12_404-CSS) <a style="color: red" href="http://cl9000.gitee.io/web-code/12_404-CSS/"> ## => 【预览】</a>
 * [Darkmode.js实现黑暗模式](13_darkmodejs) <a style="color: red" href="http://cl9000.gitee.io/web-code/13_darkmodejs/"> ## => 【预览】</a>
+* [Granim.js 流体渐变](granim.js) <a style="color: red" href="https://sarcadass.github.io/granim.js/"> ## => 【预览】</a>
 
 #### web-library
 * [3D网格效果](web-library/3DGridEffect) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/3DGridEffect/"> ## => 【预览】</a>
