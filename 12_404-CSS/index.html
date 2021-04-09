@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <title>Gradient Animation Text Effects In CSS</title>
+    <style type="text/css">
+      body{
+      font-family: 'Sen', sans-serif;
+      background: #130f40;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      }
+      h1{
+      font-size: 150px;
+      text-align: center;
+      font-weight: bold;
+      background-position: 70%;
+      background-size: 400%;
+      -webkit-text-fill-color:transparent;
+      -webkit-background-clip:text;
+      animation: animate 5s linear infinite;
+      background-image: linear-gradient(125deg,#1a828a,#0d4f54);
+      }
+      @keyframes animate
+      {
+      from {
+      -webkit-filter: hue-rotate(0deg);
+      }
+      to {
+      -webkit-filter: hue-rotate(-360deg);
+      }		
+      }
+      @media(max-width: 625px){
+      h1{
+      font-size: 90px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      W3hubs
+    </h1>
+  </body>
+</html>
