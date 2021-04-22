@@ -74,7 +74,9 @@
 ### web-css
 * [动画按钮CSS](web-css/css3-animated-buttons) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-animated-buttons/"> ## => 【预览】</a>
 * [新拟物风格UI元素 CSS3](web-css/css3-neumorphic-elements) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-neumorphic-elements/"> ## => 【预览】</a>
-* [3D 卧室动画CSS3](web-css/ss3-3d-bedroom) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/ss3-3d-bedroom/"> ## => 【预览】</a>
+* [3D 卧室动画 CSS3](web-css/css3-3d-bedroom) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-3d-bedroom/"> ## => 【预览】</a>
+* [3D 卡片翻转动画 CSS3](web-css/css3-3d-card-rotate) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-3d-card-rotate/"> ## => 【预览】</a>
+
 
 
 
