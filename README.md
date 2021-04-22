@@ -70,8 +70,16 @@
 * [使用 SVG 创建 Material Design 涟漪纹波效果](web-library/svgripples) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/svgripples/"> ## => 【预览】</a>
 * [垂直固定导航(侧栏)](web-library/vertical-fixed-navigation) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/vertical-fixed-navigation/"> ## => 【预览】</a>
 * [摇摆弹性效果幻灯片](web-library/WobblySlideshowEffect) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/WobblySlideshowEffect/"> ## => 【预览】</a>
+
+* [动画按钮CSS](web-css/css3-animated-buttons) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-animated-buttons/"> ## => 【预览】</a>
+
+* [新拟物风格UI元素 CSS3](web-css/css3-neumorphic-elements) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-neumorphic-elements/"> ## => 【预览】</a>
+
+
+### 直达第三方官网
 * [Bespoke.js–基于浏览器的演示文稿微框架] <a style="color: red" href="http://markdalgleish.com/projects/bespoke.js/"> ## => 【预览】</a>
 * [Pressure.js – 用于处理Force Touch，3D Touch的JavaScript库] <a style="color: red" href="https://pressurejs.com/"> ## => 【预览】</a> 
+* [cool-admin(midway版)一个很酷的后台权限管理系统，开源，模块化、插件化、极速开发CRUD] <a style="color: red" href="https://gitee.com/cl9000/cool-admin-midway"> ## => 【预览】</a> 
 
 
 
@@ -85,8 +93,3 @@ git commit -m "first commit"
 git remote add origin https://github.com/cl9000/web-code.git
 git push -u origin master
 ```
-
-
-
-
-
