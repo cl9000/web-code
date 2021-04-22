@@ -71,11 +71,13 @@
 * [垂直固定导航(侧栏)](web-library/vertical-fixed-navigation) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/vertical-fixed-navigation/"> ## => 【预览】</a>
 * [摇摆弹性效果幻灯片](web-library/WobblySlideshowEffect) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-library/WobblySlideshowEffect/"> ## => 【预览】</a>
 
-### web-css
-* [动画按钮CSS](web-css/css3-animated-buttons) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-animated-buttons/"> ## => 【预览】</a>
-* [新拟物风格UI元素 CSS3](web-css/css3-neumorphic-elements) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-neumorphic-elements/"> ## => 【预览】</a>
-* [3D 卧室动画 CSS3](web-css/css3-3d-bedroom) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-3d-bedroom/"> ## => 【预览】</a>
-* [3D 卡片翻转动画 CSS3](web-css/css3-3d-card-rotate) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css/css3-3d-card-rotate/"> ## => 【预览】</a>
+### web-css-html
+* [动画按钮CSS](web-css-html/css3-animated-buttons) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/css3-animated-buttons/"> ## => 【预览】</a>
+* [新拟物风格UI元素 CSS3](web-css-html/css3-neumorphic-elements) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/css3-neumorphic-elements/"> ## => 【预览】</a>
+* [3D 卧室动画 CSS3](web-css-html/css3-3d-bedroom) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/css3-3d-bedroom/"> ## => 【预览】</a>
+* [3D 卡片翻转动画 CSS3](web-css-html/css3-3d-card-rotate) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/css3-3d-card-rotate/"> ## => 【预览】</a>
+* [3D无限循环图片流 HTML5](web-css-html/html5-3d-infinite-flow) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-infinite-flow/"> ## => 【预览】</a>
+* [3D 视差相册画廊 HTML5](web-css-html/html5-3d-parallax-photos) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-parallax-photos/"> ## => 【预览】</a>
 
 
 
