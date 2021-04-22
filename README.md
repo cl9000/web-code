@@ -25,7 +25,7 @@
 
 
 
-* [大屏数据 Vue](big-screen-vue-datav ) <a style="color: red" href="http://cl9000.gitee.io/web-code/big-screen-vue-datav/dist/"> ## => 【预览】</a>
+* [大屏数据 Vue](big-screen-vue-datav ) <a style="color: red" href="http://cl9000.gitee.io/web-code/big-screen-vue-datav/"> ## => 【预览】</a>
 * [登录页](01_login) <a style="color: red" href="http://cl9000.gitee.io/web-code/01_login/"> ## => 【预览】</a>
 * [FullPage](02_simple_full_pages) <a style="color: red" href="http://cl9000.gitee.io/web-code/02_simple_full_pages/"> ## => 【预览】</a>
 * [简单欢迎页](03_welcome_like) <a style="color: red" href="http://cl9000.gitee.io/web-code/03_welcome_like/"> ## => 【预览】</a>
