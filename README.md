@@ -81,6 +81,7 @@
 * [3D无限循环图片流 HTML5](web-css-html/html5-3d-infinite-flow) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-infinite-flow/"> ## => 【预览】</a>
 * [3D 视差相册画廊 HTML5](web-css-html/html5-3d-parallax-photos) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-parallax-photos/"> ## => 【预览】</a>
 
+* [3D全屏相册动画 HTML5](web-css-html/html5-3d-slider) <a style="color: red" href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-slider/"> ## => 【预览】</a>
 
 
 
