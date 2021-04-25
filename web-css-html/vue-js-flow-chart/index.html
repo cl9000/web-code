@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js流程图插件DEMO演示</title>
+  <link rel="stylesheet" href="reset.min.css">
+<link rel='stylesheet' href='tachyons.min.css'>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main id="app">
+</main>
+
+<script type="text/x-template" id="lifecycle">
+  <div class="measure center mt3">
+    <mounting-component
+      @beforeCreate="bc"
+      @created="c"
+      @mounted="m"
+      @beforeUpdate="bu"
+      @updated="u"
+      @flush="timeouts.flush"
+      @shh="timeouts.shh"
+    />
+      
+    <svg viewBox="0 0 820 893" xmlns="http://www.w3.org/2000/svg"><defs><rect id="a" x="35" width="180" height="48" rx="8"/><rect id="b" x="13" y="93" width="223" height="70" rx="8"/><rect id="c" x="2" y="210" width="244" height="70" rx="8"/><rect id="d" y="346" width="244" height="70" rx="8"/><rect id="e" y="485" width="244" height="70" rx="8"/><ellipse id="f" cx="293" cy="699.5" rx="159" ry="116.5"/><rect id="g" x="376" y="665" width="244" height="70" rx="8"/><rect id="h" x="68" y="21" width="160" height="61" rx="8"/><rect id="i" x="29" width="160" height="61" rx="8"/><rect id="j" width="160" height="61" rx="8"/><rect id="k" width="160" height="61" rx="8"/><rect id="l" width="160" height="62" rx="8"/></defs><g fill="none" fill-rule="evenodd"><g transform="translate(200)"><use fill="#33495E" href="#a"/><rect stroke="#979797" x="35.5" y=".5" width="179" height="47" rx="8"/><text font-family="Helvetica" font-size="24" fill="#FFF"><tspan x="69.256" y="30">New Vue()</tspan></text><use fill="#31B980" href="#b"/><rect stroke="#979797" x="13.5" y="93.5" width="222" height="69" rx="8"/><text font-family="Helvetica" font-size="20" fill="#FFF"><tspan x="112.16" y="121">Init</tspan> <tspan x="48.244" y="145">events &amp; lifecycle</tspan></text><path d="M125.5 48.5v44M125.5 92.5l3-10.8h-6l3 10.8zM123.5 163.5v44M123.5 207.5l3-10.8h-6l3 10.8zM124.5 280.5V346M124.5 346l3-10.8h-6l3 10.8zM124.5 416.5V482M124.5 482l3-10.8h-6l3 10.8zM124.5 554.5V644M124.5 644l3-10.8h-6l3 10.8z" stroke="#979797" stroke-width="2" stroke-linecap="square"/><use fill="#31B980" href="#c"/><rect stroke="#979797" x="2.5" y="210.5" width="243" height="69" rx="8"/><use fill="#31B980" href="#d"/><rect stroke="#979797" x=".5" y="346.5" width="243" height="69" rx="8"/><text font-family="Helvetica" font-size="20" fill="#FFF"><tspan x="21.286" y="375">Compile template into</tspan> <tspan x="51.291" y="399">render function</tspan></text><use fill="#31B980" href="#e"/><rect stroke="#979797" x=".5" y="485.5" width="243" height="69" rx="8"/><text font-family="Helvetica" font-size="20" fill="#FFF"><tspan x="36.291" y="514">Create vm.$el and</tspan> <tspan x="39.641" y="538">replace “el” with it</tspan></text><text font-family="Helvetica" font-size="20" fill="#FFF"><tspan x="112.66" y="237">Init</tspan> <tspan x="32.631" y="261">injections &amp; reactivity</tspan></text><g stroke="#979797"><use stroke-width="2" fill="#FFF" href="#f"/><use href="#f"/></g><circle stroke="#979797" fill="#D0021B" cx="123" cy="709" r="61"/><text font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#FFF"><tspan x="81.345" y="713">Mounted</tspan></text><g><use fill="#31B980" href="#g"/><rect stroke="#979797" x="376.5" y="665.5" width="243" height="69" rx="8"/></g><text font-family="Helvetica" font-size="20" fill="#FFF"><tspan x="443.723" y="695">Virtual DOM</tspan> <tspan x="410.168" y="719">re-render and patch</tspan></text><text font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#9B9B9B"><tspan x="244.104" y="618">when data </tspan> <tspan x="252.429" y="642">changes</tspan></text></g>
+      <g transform="translate(540 811)"><use fill="#FFF" href="#h"/><rect stroke="#D0021B" v-bind:class="updated ? 'active': 'reg'" x="69" y="22" width="158" height="59" rx="8"/></g><path d="M540.5 811.5l65 39M605.5 850.5l-7.717-8.13-3.087 5.146L605.5 850.5z" stroke="#D0021B" v-bind:class="updated ? 'active': 'reg'" stroke-linecap="square"/><text font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#D0021B" transform="translate(540 811)"><tspan x="109.113" y="57">updated</tspan></text>
+      <g transform="translate(579 492)"><use fill="#FFF" href="#i"/><rect stroke="#D0021B" v-bind:class="beforeUpdate ? 'active': 'reg'" x="30" y="1" width="158" height="59" rx="8"/></g><path d="M579 599l59-44M638 555l-10.45 4.052 3.586 4.81L638 555z" stroke="#D0021B" v-bind:class="beforeUpdate ? 'active': 'reg'" stroke-linecap="square"/><text font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#D0021B" transform="translate(579 492)"><tspan x="45.047" y="36">beforeUpdate</tspan></text>
+      <g><path d="M323.5 583.5H160M160 583.5l10.8 3v-6l-10.8 3z" stroke="#D0021B" v-bind:class="mounted ? 'active': 'reg'" stroke-linecap="square"/><g transform="translate(0 552)"><use fill="#FFF" href="#j"/><rect stroke="#D0021B" v-bind:class="mounted ? 'active': 'reg'" x="1" y="1" width="158" height="59" rx="8"/></g><text font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#D0021B" transform="translate(0 552)"><tspan x="38.283" y="38">mounted</tspan></text></g>
+      <g><path d="M323.5 311.5H160M160 311.5l10.8 3v-6l-10.8 3z" stroke="#D0021B" v-bind:class="created ? 'active': 'reg'" stroke-linecap="square"/><g transform="translate(0 280)"><use fill="#FFF" href="#k"/><rect stroke="#D0021B" v-bind:class="created ? 'active': 'reg'" x="1" y="1" width="158" height="59" rx="8"/></g><text font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#D0021B" transform="translate(0 280)"><tspan x="44.424" y="38">created</tspan></text></g>
+      <g><g transform="translate(0 152)"><use fill="#FFF" href="#l"/><rect stroke="#D0021B" v-bind:class="beforeCreate ? 'active': 'reg'" x="1" y="1" width="158" height="60" rx="8"/></g><text fill="#D0021B" font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" transform="translate(0 152)"><tspan x="18.311" y="37">beforeCreate</tspan></text><path d="M323.5 183.5H162M162 183.5l10.8 3v-6l-10.8 3z" stroke="#D0021B" v-bind:class="beforeCreate ? 'active': 'reg'" stroke-linecap="square"/></g></g>
+    </svg>
+  </div>
+</script>
+<!-- partial -->
+  <script src='vue.min.js'></script>
+<script  src="script.js"></script>
+
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

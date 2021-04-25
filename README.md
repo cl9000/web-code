@@ -81,6 +81,13 @@
 * [3D无限循环图片流 HTML5](web-css-html/html5-3d-infinite-flow) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-infinite-flow/"> ## => 【预览】</a>
 * [3D 视差相册画廊 HTML5](web-css-html/html5-3d-parallax-photos) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-parallax-photos/"> ## => 【预览】</a>
 * [3D全屏相册动画 HTML5](web-css-html/html5-3d-slider) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-3d-slider/"> ## => 【预览】</a>
+* [React.js 扭曲相册焦点图动画](web-css-html/react-js-image-slider) <a href="http://cl9000.gitee.io/web-code/web-css-html/react-js-image-slider/"> ## => 【预览】</a>
+* [SVG 动画Tab菜单栏](web-css-html/svg-animated-tab-menu) <a href="http://cl9000.gitee.io/web-code/web-css-html/svg-animated-tab-menu/"> ## => 【预览】</a>
+* [Vue.js 流程图插件 可自定义流程节点事件](web-css-html/vue-js-flow-chart) <a href="http://cl9000.gitee.io/web-code/web-css-html/vue-js-flow-chart/"> ## => 【预览】</a>
+* [Vue.js任务列表 可本地存储任务数据](web-css-html/vue-js-todo-list) <a href="http://cl9000.gitee.io/web-code/web-css-html/vue-js-todo-list/"> ## => 【预览】</a>
+* [动画 Tab-Bar](web-css-html/animated-tab-bar_v2.0) <a href="http://cl9000.gitee.io/web-code/web-css-html/animated-tab-bar_v2.0/"> ## => 【预览】</a>
+* [动画 Nav-Bar](web-css-html/aNavigation-Bar) <a href="http://cl9000.gitee.io/web-code/web-css-html/Navigation-Bar/"> ## => 【预览】</a>
+
 
 
 
