@@ -87,7 +87,10 @@
 * [Vue.js任务列表 可本地存储任务数据](web-css-html/vue-js-todo-list) <a href="http://cl9000.gitee.io/web-code/web-css-html/vue-js-todo-list/"> ## => 【预览】</a>
 * [动画 Tab-Bar](web-css-html/animated-tab-bar_v2.0) <a href="http://cl9000.gitee.io/web-code/web-css-html/animated-tab-bar_v2.0/"> ## => 【预览】</a>
 * [动画 Nav-Bar](web-css-html/aNavigation-Bar) <a href="http://cl9000.gitee.io/web-code/web-css-html/Navigation-Bar/"> ## => 【预览】</a>
-
+* [JS 随机密码生成器，可控密码复杂度](web-css-html/js-passwd-generator) <a href="http://cl9000.gitee.io/web-code/web-css-html/js-passwd-generator/"> ## => 【预览】</a>
+* [JS 实现带二级菜单的图片轮播动画](web-css-html/js-image-player-menu) <a href="http://cl9000.gitee.io/web-code/web-css-html/js-image-player-menu/"> ## => 【预览】</a>
+* [CSS3 水墨风格背景动画按钮](web-css-html/css3-ink-button) <a href="http://cl9000.gitee.io/web-code/web-css-html/css3-ink-button/"> ## => 【预览】</a>
+* [HTML5 CSS3颜色选取并复制十六进制值](web-css-html/html5-css3-color-copy) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-css3-color-copy/"> ## => 【预览】</a>
 
 
 
