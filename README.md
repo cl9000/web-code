@@ -95,6 +95,9 @@
 * [HTML5 WebGL实验 超酷的HTML5 Canvas波浪墙](web-css-html/voxels-liquid) <a href="http://cl9000.gitee.io/web-code/web-css-html/voxels-liquid/"> ## => 【预览】</a>
 * [HTML5版Flappy Bird游戏在线演示](web-css-html/html5-flappy-bird) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-flappy-bird/"> ## => 【预览】</a>
 * [HTML5 Canvas画板画图工具](web-css-html/html5-canvas-drawing) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-canvas-drawing/"> ## => 【预览】</a>
+* [HTML5 SVG Tab滑块菜单](web-css-html/html5-svg-tab-slider) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-svg-tab-slider/"> ## => 【预览】</a>
+* [HTML5 Canvas 3D跳动Loading加载动画](web-css-html/html5-canvas-3d-loading) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-canvas-3d-loading/"> ## => 【预览】</a>
+* [HTML5 颜色选择器 实时输出RGB值](web-css-html/html5-color-picker-rgb) <a href="http://cl9000.gitee.io/web-code/web-css-html/html5-color-picker-rgb/"> ## => 【预览】</a>
 
 
 
