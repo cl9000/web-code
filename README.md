@@ -21,6 +21,8 @@
 | 10 | 10_loading | loading |
 | 11 | 11_mosaic_css | 悬停马赛克 |
 | 12 | 12_404-CSS | 404-CSS |
+| 13 | 13_darkmodejs | 暗黑模式 |
+| 14 | 14_九宫格浮动 | 九宫格浮动动画 |
 | 12 | web-library | 其它web-lib |
 
 
@@ -39,6 +41,7 @@
 * [悬停马赛克](11_mosaic_css) <a href="http://cl9000.gitee.io/web-code/11_mosaic_css/"> ## => 【预览】</a>
 * [404-CSS](12_404-CSS) <a href="http://cl9000.gitee.io/web-code/12_404-CSS/"> ## => 【预览】</a>
 * [Darkmode.js实现黑暗模式](13_darkmodejs) <a href="http://cl9000.gitee.io/web-code/13_darkmodejs/"> ## => 【预览】</a>
+* [14_九宫格浮动](14_九宫格浮动) <a href="http://cl9000.gitee.io/web-code/14_九宫格浮动/"> ## => 【预览】</a>
 * [Granim.js 流体渐变](granim.js) <a href="https://sarcadass.github.io/granim.js/"> ## => 【预览】</a>
 
 #### web-library
