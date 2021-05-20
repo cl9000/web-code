@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="never">
+  <title>Pixel to Rem 在线转换器</title>
+
+  <style>
+  </style>
+</head>
+
+<body style="font-size: 16px">
+    <h2 style="text-align: center">Pixel to Rem 在线转换器</h2><br/>
+    <article class="post"><div class="content post__content clearfix">
+    <style>
+    /* html{font-size:16px!important} */
+    .form-label,.form-input{display:block;margin-bottom:8px}
+    .form-input{padding:10px;font-size:16px}
+    .form-group{margin:auto;min-width:50%}
+    .input-group{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;width:100%}
+    .input-group-append,.input-group-prepend{margin-right:-2px;display:flex}
+    .input-group-text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:6px 16px;margin-bottom:0;font-size:16px;font-weight:700;line-height:1.5;color:#495057;text-align:center;white-space:nowrap;background-color:#e9ecef;border:1px solid #ced4da;border-radius:4px;min-width:60px}
+    .form-control{display:block;width:100%;padding:6px 4.5px;font-size:16px;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da!important;border-radius:4px!important;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+    .input-group>.form-control:not(:first-child){border-top-left-radius:0!important;border-bottom-left-radius:0!important}
+    .input-group>.form-control:not(:last-child){border-top-right-radius:0!important;border-bottom-right-radius:0!important}
+    .input-group>.input-group-prepend>.input-group-text{border-top-right-radius:0!important;border-bottom-right-radius:0!important}
+    .input-group>.form-control{position:relative!important;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:auto;width:auto!important;margin-bottom:0!important;padding:10px!important;text-indent:15px;}
+    .input-group{padding-bottom:20px}
+    .input-group>.input-group-append>.icon-button{border-top-left-radius:0!important;border-bottom-left-radius:0!important}
+    .icon-button{margin-right: 2px;display:inline-block!important;font-weight:400!important;text-align:center!important;white-space:nowrap!important;vertical-align:middle!important;-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important;border:1px solid transparent!important;padding:6px 4.5px!important;font-size:16!important;line-height:1.5!important;border-radius:4px!important;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out!important;background-color:#ced4da;border-color:#ced4da!important;border-left:none!important}
+    .icon-button:active{background-color:#e9ecef}
+    .icon-copy{background:url(./img/clipboard.svg)no-repeat 16px 16px;padding-left:45px!important}
+    .form-converter>h3 {margin: 0 0 20px!important;}
+    /* Alerts */
+    .alert-notification {position: fixed;top: 0;left: 0;right: 0;margin-left: auto;margin-right: auto;text-align: center;padding: 4.5px 24px;
+    margin-bottom: 1rem;border: 1px solid transparent;border-radius: 1.5px!important;color: #004085;background-color: #cce5ff;border-color: #063261;
+    margin: 20px;padding: 20px;z-index: 1000}
+    /* Animate opacity */
+    @keyframes fade {from { opacity: 1 }to { opacity: 0 }}
+    @-moz-keyframes fade {from { opacity: 1 }to { opacity: 0 }}
+    @-webkit-keyframes fade {from { opacity: 1 }to { opacity: 0 }}
+    </style>
+    <form id="pxToRemConverter" class="form-converter">
+    <h3>输入 root 节点 font-size (default 16px) *</h3>
+    <div class="input-group"><div class="input-group-prepend">
+    <div class="input-group-text">px</div></div><input type="number" id="defaultFontSize" name="defaultFontSize" class="form-control" value="16" onchange="changeInDefaultFontSize(this.value)"></div>
+    <h3>输入 font-size 按 像素（pixel）*</h3>
+    <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">px</div></div><input type="number" id="pixel" name="pixel" class="form-control" onchange="changeInPixel(this.value)"></div>
+    <h3>转换 rem</h3>
+    <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">rem</div></div><input type="text" id="rem2" name="rem2" class="form-control" onclick="this.select()">
+    <div class="input-group-append"><button class="icon-button icon-copy" type="button" onclick="copyRemToClipboard()"></button></div></div>
+    </form>
+    </div></article>
+    <script>
+      const changeInPixel = (pixel) => {
+      const defaultFontSize = document.getElementById("defaultFontSize").value;
+      document.getElementById("rem2").value = Number(pixel/defaultFontSize).round(4) + "rem"
+    }
+    const changeInDefaultFontSize = (defaultFontSize) => {
+      const pixel = document.getElementById("pixel").value;
+      document.getElementById("rem2").value = Number(pixel/defaultFontSize).round(4) + "rem"
+    }
+    Number.prototype.round = function(places) {
+      return +(Math.round(this + "e+" + places)  + "e-" + places);
+    }
+    const copyRemToClipboard = () => {
+      const remValue = document.getElementById("rem2").value;
+      copyToClipboard(remValue);
+      if(remValue){
+        alertNotification("Copied to clipboard: " + remValue);
+      }else{
+        alertNotification("Nothing to copy");
+      }
+    }
+    ///
+    // Copies a string to the clipboard.
+    const copyToClipboard = (text) => {
+      if (window.clipboardData && window.clipboardData.setData) {
+        // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+        return window.clipboardData.setData("Text", text);
+      }
+      else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = text;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        }
+        catch (ex) {
+          console.warn("Copy to clipboard failed.", ex);
+          return false;
+        }
+        finally {
+          document.body.removeChild(textarea);
+        }
+      }else if(navigator.clipboard){
+        navigator.clipboard.writeText(text).then(function() {
+          console.log('Async: Copying to clipboard was successful!');
+          return true;
+        }, function(err) {
+          console.error('Async: Could not copy text: ', err);
+          return false;
+        });
+      }
+      return false;
+    }
+    const alertNotification = (msg, duration=3000) => {
+      var el = document.createElement("div");
+      el.setAttribute("class", "alert-notification");
+      el.style.animation = "fade "+duration+"ms ease";
+      el.innerHTML = msg; 
+      setTimeout(function(){
+        el.parentNode.removeChild(el);
+      }, duration);
+      document.body.appendChild(el);
+    }
+    </script>
+    </body>
+
+</html>
