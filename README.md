@@ -42,6 +42,7 @@
 * [404-CSS](12_404-CSS) <a href="http://cl9000.gitee.io/web-code/12_404-CSS/"> ## => 【预览】</a>
 * [Darkmode.js实现黑暗模式](13_darkmodejs) <a href="http://cl9000.gitee.io/web-code/13_darkmodejs/"> ## => 【预览】</a>
 * [14_九宫格浮动](14_九宫格浮动) <a href="http://cl9000.gitee.io/web-code/14_九宫格浮动/"> ## => 【预览】</a>
+* [15_canvas元素平移滚动背景](15_canvas元素平移滚动背景) <a href="http://cl9000.gitee.io/web-code/15_canvas元素平移滚动背景/"> ## => 【预览】</a>
 * [Granim.js 流体渐变](granim.js) <a href="https://sarcadass.github.io/granim.js/"> ## => 【预览】</a>
 
 #### web-library
