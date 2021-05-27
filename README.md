@@ -29,7 +29,6 @@
 | n | web-library | 其它web-lib |
 
 
-
 * [00 大屏数据 Vue](big-screen-vue-datav ) <a href="http://cl9000.gitee.io/web-code/big-screen-vue-datav/"> ## => 【预览】</a>
 * [01 登录页](01_login) <a href="http://cl9000.gitee.io/web-code/01_login/"> ## => 【预览】</a>
 * [02 FullPage](02_simple_full_pages) <a href="http://cl9000.gitee.io/web-code/02_simple_full_pages/"> ## => 【预览】</a>
@@ -48,6 +47,7 @@
 * [15_canvas元素平移滚动背景](15_canvas元素平移滚动背景) <a href="http://cl9000.gitee.io/web-code/15_canvas元素平移滚动背景/"> ## => 【预览】</a>
 * [16_px_rem在线转化器](16_px_rem在线转化器) <a href="http://cl9000.gitee.io/web-code/16_px_rem在线转化器/"> ## => 【预览】</a>
 * [17_RGB_HEX在线转化器](17_RGB_HEX在线转化器) <a href="http://cl9000.gitee.io/web-code/17_RGB_HEX在线转化器/"> ## => 【预览】</a>
+* [18_页面阅读进度条](18_页面阅读进度条) <a href="http://cl9000.gitee.io/web-code/18_页面阅读进度条/"> ## => 【预览】</a>
 * [Granim.js 流体渐变](granim.js) <a href="https://sarcadass.github.io/granim.js/"> ## => 【预览】</a>
 
 
